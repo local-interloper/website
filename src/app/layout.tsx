@@ -7,9 +7,9 @@ import Menu from "@/components/_core/menu";
 
 const inter = Inter({subsets: ['latin']});
 
-const appName = "local.interloper's Boilerplate"
-const description = "A set of tools designed to be used in conjunction with Next.js to speed up development."
-const baseUrl = "https://local.interloper.me"
+const appName = "local.interloper's Boilerplate";
+const description = "A set of tools designed to be used in conjunction with Next.js to speed up development.";
+const baseUrl = "https://local.interloper.me";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -79,7 +79,7 @@ const RootLayout = ({children}: IChildrenProps) => {
         inter.className
       )}
     >
-    {/*<Menu />*/}
+    <Menu />
     {children}
     </body>
     </html>
