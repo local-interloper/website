@@ -79,7 +79,7 @@ const RootLayout = ({children}: IChildrenProps) => {
         inter.className
       )}
     >
-    <Menu />
+    {/*<Menu />*/}
     {children}
     </body>
     </html>
