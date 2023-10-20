@@ -14,13 +14,9 @@ const OPTIONS = [
     href: "/"
   },
   {
-    title: "Services",
-    href: "/"
+    title: "About Me",
+    href: "/about-me"
   },
-  {
-    title: "About",
-    href: "/"
-  }
 ];
 
 const Menu = () => {

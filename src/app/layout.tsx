@@ -7,8 +7,8 @@ import Menu from "@/components/_core/menu";
 
 const inter = Inter({subsets: ['latin']});
 
-const appName = "local.interloper's Boilerplate";
-const description = "A set of tools designed to be used in conjunction with Next.js to speed up development.";
+const appName = "local.interloper";
+const description = "An information HUB for everything me related";
 const baseUrl = "https://local.interloper.me";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description,
   generator: "Next.js",
   applicationName: appName,
-  keywords: ["Boilerplate"],
+  keywords: ["Personal"],
   creator: "local.interloper",
   publisher: "Vercel",
   authors: [{
