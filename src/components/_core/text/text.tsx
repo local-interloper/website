@@ -5,14 +5,16 @@ import {HorizontalAlignment} from "@/types/alignment";
 
 interface ITextProps extends ClassnameProps, ChildrenProps {
   bold?: boolean;
+  flow?: boolean;
 }
 
-const Text = ({bold = false, className, children}: ITextProps) => {
+const Text = ({bold = false, flow = false, className, children}: ITextProps) => {
   return (
     <p
       className={
         classNames(
-          "text-lg lg:text-xl max-w-xl",
+          "text-lg lg:text-xl",
+          !flow && "max-w-xl",
           bold && "font-bold",
           className
         )

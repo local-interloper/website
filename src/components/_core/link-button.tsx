@@ -22,7 +22,6 @@ const LinkButton = ({href, onClick, text, size = "md", newTab, colorOverride, cl
     passedClassName
   );
 
-  console.log(BUTTON_SIZEMAP[size]);
 
   return (
     <Link

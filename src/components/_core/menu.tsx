@@ -41,7 +41,12 @@ const Menu = () => {
         <Title>Menu</Title>
         <div className="flex flex-col items-center gap-5 mt-5 w-full">
           {OPTIONS.map(({title, href}, i) => (
-            <LinkButton text={title} href={href} key={i} onClick={() => setOpen(false)} />
+            <LinkButton
+              text={title}
+              href={href}
+              key={i}
+              onClick={() => setOpen(false)}
+            />
           ))}
         </div>
 
