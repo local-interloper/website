@@ -26,7 +26,7 @@ const AboutMePage = () => {
     <PageWrapper className="py-10">
       <Container flow className="gap-5 px-5">
         <Container responsive flow>
-          <Container className="h-full w-full bg-background rounded-xl">
+          <Container className="h-full w-full bg-background rounded-xl p-5">
             <Image src={ProfilePicture} alt="Profile Picture" className="h-32 w-32 rounded-full shadow" />
             <TextWrapper>
               <Text>local.interloper</Text>
