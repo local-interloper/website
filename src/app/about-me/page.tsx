@@ -76,7 +76,7 @@ const AboutMePage = () => {
           <Container flow className="h-full">
             <Title>Technologies:</Title>
             <div className="flex flex-col justify-center h-full">
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
                 {[
                   SiNextdotjs,
                   SiReact,
