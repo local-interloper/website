@@ -10,11 +10,11 @@ const ExperienceCard = ({experience: {title, year, description, techStack}}: IEx
   return (
     <div className="flex flex-col gap-5 p-5 w-full rounded-xl bg-background-light shadow">
       <div className="flex justify-between">
-        <Title>{title}</Title>
+        <Title center={false}>{title}</Title>
         <text>({year})</text>
       </div>
 
-      <Text>{description}</Text>
+      <Text className="pl-5" flow>{description}</Text>
 
       <div className="flex flex-wrap w-full">
         {techStack.map((Icon, i) => (

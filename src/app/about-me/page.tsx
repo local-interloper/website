@@ -7,10 +7,9 @@ import ProfilePicture from "@assets/pfp.png";
 import TextWrapper from "@/components/_core/containers/text-wrapper";
 import {TbSql} from "react-icons/tb";
 import {
-  SiArduino,
   SiC,
   SiCsharp, SiDotnet, SiElectron, SiGit, SiGithub, SiGodotengine, SiHaxe,
-  SiJavascript, SiJetbrains,
+  SiJavascript, SiJetbrains, SiLinux,
   SiLua,
   SiNextdotjs, SiNodedotjs, SiPostgresql,
   SiPython, SiReact,
@@ -24,10 +23,7 @@ import ExperienceCard from "@/app/about-me/experience-card";
 
 const AboutMePage = () => {
   return (
-    <PageWrapper className="pb-10">
-      <Container flow className="bg-background shadow p-5">
-        <Title>About</Title>
-      </Container>
+    <PageWrapper className="py-10">
       <Container flow className="gap-5 px-5">
         <Container responsive flow>
           <Container className="h-full w-full bg-background rounded-xl">
@@ -90,7 +86,7 @@ const AboutMePage = () => {
                   SiTauri,
                   SiGit,
                   SiDotnet,
-                  SiArduino,
+                  SiLinux,
                   SiGodotengine,
                   SiUnity,
                   SiUnrealengine
@@ -118,10 +114,11 @@ const AboutMePage = () => {
             </div>
             <Link
               href="https://github.com/local-interloper/"
-              className="flex items-center justify-center bg-background-light hover:bg-background-dark rounded-xl shadow h-32 w-32"
+              className="flex flex-col items-center justify-center bg-background-light hover:bg-background-dark rounded-xl shadow h-32 w-32"
               target="_blank"
             >
               <SiGithub size={80} />
+              <Text>My Projects</Text>
             </Link>
           </Container>
         </Container>
