@@ -1,21 +1,39 @@
 import PageWrapper from "@/components/_core/containers/page-wrapper";
 import Container from "@/components/_core/containers/container";
 import Title from "@/components/_core/text/title";
+import Image from "next/image";
+import ProfilePicture from "@assets/pfp.png";
 import TextWrapper from "@/components/_core/containers/text-wrapper";
-import {AiFillCode} from "react-icons/ai";
-import Text from "@/components/_core/text/text";
+import {SOCIAL} from "@/data/social";
+import Link from "next/link";
+import classNames from "@/util/classNames";
 
 const Home = () => {
   return (
     <PageWrapper>
       <Container className="bg-background shadow" screen>
         <Container responsive flow={false}>
-          <Container>
-            <TextWrapper center={false} className="w-max">
-              <Title size="sm">local.interloper&apos;s</Title>
-              <Title size="lg">Website</Title>
-              <Text>Comming soon...</Text>
-            </TextWrapper>
+          <Container responsive>
+            <div className="flex flex-col gap-5">
+              <Title className="font-bold" size="sm">local.interloper</Title>
+              <div className="flex justify-center w-full gap-5">
+                {SOCIAL.map(({Icon, href}, i) => (
+                  <Link
+                    key={i}
+                    href={href}
+                    className={classNames("p-2 bg-background-light rounded-full shadow",
+                      "hover:bg-background-dark transition-all duration-200"
+                    )}
+                    target="_blank"
+                  >
+                    <Icon size={40} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <Image
+              src={ProfilePicture} alt="Profile Picture" className="w-32 h-32 rounded-full shadow"
+            />
           </Container>
         </Container>
       </Container>
