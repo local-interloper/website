@@ -32,7 +32,7 @@ const ExperienceModal = ({title: entryTitle}: IExperienceModalProps) => {
         className="p-2 rounded-xl border-2 border-primary hover:bg-primary transition-all duration-200 w-20"
         onClick={() => setShow(true)}
       >
-        <Text flow>More</Text>
+        <Text flow>Details</Text>
       </button>
       <Modal show={show}>
         <div className="flex flex-col w-full h-full">
@@ -43,10 +43,10 @@ const ExperienceModal = ({title: entryTitle}: IExperienceModalProps) => {
           </div>
           <div className="flex flex-col items-center w-full h-full overflow-y-scroll gap-10">
             <Title>{title}</Title>
-            <Text flow>{description}</Text>
-            <div className="flex w-full justify-between px-20 mt-auto">
+            <Text flow center={false}>{description}</Text>
+            <div className="flex flex-col lg:flex-row w-full justify-between px-20 mt-auto gap-5">
               {client && (
-                <div>
+                <div className="flex flex-col items-center">
                   <Text bold>This work was done for:</Text>
                   <div className="flex items-center gap-2">
                     <Text>{client.name}</Text>
@@ -58,7 +58,7 @@ const ExperienceModal = ({title: entryTitle}: IExperienceModalProps) => {
                   </div>
                 </div>
               )}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col items-center gap-2">
                 <Text bold>Tools and technologies used:</Text>
                 <div className="flex justify-center gap-2">
                   {techStack.map((Icon, i) => (
