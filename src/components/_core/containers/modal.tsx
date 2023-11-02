@@ -39,7 +39,7 @@ const Modal = ({show, fullscreen, className, children}: IModalProps) => {
           className={
             classNames(
               "w-full h-full bg-background p-5",
-              !fullscreen && "max-w-4xl max-h-96 rounded-xl"
+              !fullscreen && "max-w-6xl max-h-[80svh] rounded-xl"
             )
           }
         >

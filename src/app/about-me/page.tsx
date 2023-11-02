@@ -125,7 +125,9 @@ const AboutMePage = () => {
 
         <Container flow className="h-full bg-background rounded-xl p-5">
           <Title>Experience</Title>
-          {EXPERIENCE.map((experience, i) => <ExperienceCard key={i} experience={experience} />)}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+            {EXPERIENCE.map((experience, i) => <ExperienceCard key={i} experience={experience} />)}
+          </div>
         </Container>
 
       </Container>

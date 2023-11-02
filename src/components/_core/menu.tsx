@@ -43,15 +43,13 @@ const Menu = () => {
           "z-30 flex flex-col items-center justify-center py-5",
         )}
       >
-
-        <Title>Menu</Title>
         <div className="flex flex-col items-center gap-2 mt-5 w-full px-2 h-full justify-center">
           {OPTIONS.map(({title, Icon, href}, i) => (
             <Link
               href={href}
               key={i}
               onClick={() => setOpen(false)}
-              className="flex items-center gap-2 w-full bg-background-dark/[0.8] p-2 rounded-xl shadow"
+              className="flex items-center gap-2 w-full bg-background/[0.8] p-2 rounded-xl shadow"
             >
               <Icon size={50} />
               <Text className="text-2xl">{title}</Text>
@@ -61,14 +59,18 @@ const Menu = () => {
 
       </Transition>
       <div
-        className="fixed top-0 right-0 z-40 p-5 cursor-pointer"
-        onClick={() => setOpen(!open)}
+        className="fixed top-0 right-0 z-40 p-3"
       >
-        {open ? (
-          <HiX className="text-3xl lg:text-6xl" />
-        ) : (
-          <GiHamburgerMenu className="text-3xl lg:text-6xl" />
-        )}
+        <div
+          className="p-2 cursor-pointer bg-background-light rounded-xl shadow"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? (
+            <HiX className="text-3xl lg:text-6xl" />
+          ) : (
+            <GiHamburgerMenu className="text-3xl lg:text-6xl" />
+          )}
+        </div>
       </div>
     </>
   );
