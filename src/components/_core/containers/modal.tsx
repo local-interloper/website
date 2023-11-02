@@ -22,7 +22,7 @@ const Modal = ({show, fullscreen, className, children}: IModalProps) => {
       leaveTo="bg-black/[0.0]"
 
       className={classNames(
-        "fixed top-0 left-0 w-full h-[100svh] z-20 flex justify-center items-center",
+        "fixed top-0 left-0 w-full h-[100svh] z-40 flex justify-center items-center",
         className
       )}
     >
@@ -39,7 +39,7 @@ const Modal = ({show, fullscreen, className, children}: IModalProps) => {
           className={
             classNames(
               "w-full h-full bg-background p-5",
-              !fullscreen && "max-w-6xl max-h-[80svh] rounded-xl"
+              !fullscreen && "max-w-6xl lg:max-h-[80svh] lg:rounded-xl"
             )
           }
         >
