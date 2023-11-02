@@ -13,7 +13,7 @@ const Home = () => {
     <PageWrapper>
       <Container className="bg-background shadow" screen>
         <Container responsive flow={false}>
-          <Container responsive>
+          <div className="flex items-center flex-col-reverse lg:flex-row gap-10">
             <div className="flex flex-col gap-5">
               <Title className="font-bold" size="sm">local.interloper</Title>
               <div className="flex justify-center w-full gap-5">
@@ -31,10 +31,8 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <Image
-              src={ProfilePicture} alt="Profile Picture" className="w-32 h-32 rounded-full shadow"
-            />
-          </Container>
+            <Image src={ProfilePicture} alt="Profile Picture" className="w-32 h-32 rounded-full shadow" />
+          </div>
         </Container>
       </Container>
     </PageWrapper>

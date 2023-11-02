@@ -1,12 +1,20 @@
 import Title from "@/components/_core/text/title";
 import Text from "@/components/_core/text/text";
 import {IExperience} from "@/data/experience";
+import ExperienceModal from "@/app/about-me/experience-modal";
 
 interface IExperienceCardProps {
   experience: IExperience;
 }
 
-const ExperienceCard = ({experience: {title, year, description, techStack}}: IExperienceCardProps) => {
+const ExperienceCard = ({experience}: IExperienceCardProps) => {
+  const {
+    title,
+    year,
+    shortDescription,
+    techStack
+  } = experience;
+
   return (
     <div className="flex flex-col gap-5 p-5 w-full rounded-xl bg-background-light shadow">
       <div className="flex justify-between">
@@ -14,15 +22,9 @@ const ExperienceCard = ({experience: {title, year, description, techStack}}: IEx
         <text>({year})</text>
       </div>
 
-      <Text className="pl-5" flow>{description}</Text>
+      <Text className="pl-5 mb-auto" flow>{shortDescription}</Text>
 
-      <div className="flex flex-wrap w-full">
-        {techStack.map((Icon, i) => (
-          <div key={i} className="p-2">
-            <Icon size={20} />
-          </div>
-        ))}
-      </div>
+      <ExperienceModal title={title}/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import {BsDiscord, BsGithub, BsSteam, BsTelegram} from "react-icons/bs";
+import {BsDiscord, BsGithub, BsInstagram, BsSteam, BsTelegram, BsWhatsapp} from "react-icons/bs";
 
 export const SOCIAL = [
   {
@@ -6,15 +6,19 @@ export const SOCIAL = [
     href: "https://t.me/localinterloper"
   },
   {
-    Icon: BsGithub,
-    href: "https://github.com/local-interloper",
-  },
-  {
     Icon: BsDiscord,
     href: "https://discordapp.com/users/149937800467185664"
   },
   {
+    Icon: BsGithub,
+    href: "https://github.com/local-interloper",
+  },
+  {
     Icon: BsSteam,
     href: "https://steamcommunity.com/id/local-interloper"
+  },
+  {
+    Icon: BsInstagram,
+    href: "https://www.instagram.com/local.interloper/"
   }
 ]

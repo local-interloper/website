@@ -6,6 +6,7 @@ interface IContainerProps extends IClassNameProps, IChildrenProps {
   flow?: boolean;
   fill?: boolean;
   responsive?: boolean;
+  reverse?: boolean;
   center?: boolean;
   screen?: boolean;
 }
@@ -14,6 +15,7 @@ const Container = ({
   flow = false,
   fill = false,
   responsive = false,
+  reverse = false,
   center = true,
   screen = false,
   className,
@@ -25,7 +27,7 @@ const Container = ({
         "relative flex gap-10",
         flow && "w-full",
         fill && "w-full h-full",
-        responsive ? "flex-col lg:flex-row" : "flex-col",
+        responsive ? reverse ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row" : "flex-col",
         center && "items-center justify-center",
         screen && "min-h-[100svh] w-full items-center justify-center",
         className
