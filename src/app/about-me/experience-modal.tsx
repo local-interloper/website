@@ -1,13 +1,11 @@
 "use client";
 
-import Button from "@/components/_core/button";
 import Modal from "@/components/_core/containers/modal";
 import {HiX} from "react-icons/hi";
 import {useState} from "react";
 import {EXPERIENCE} from "@/data/experience";
 import Title from "@/components/_core/text/title";
 import Text from "@/components/_core/text/text";
-import LinkButton from "@/components/_core/link-button";
 import Link from "next/link";
 import {TbWorld} from "react-icons/tb";
 
