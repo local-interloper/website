@@ -22,7 +22,7 @@ const ExperienceCard = ({experience}: IExperienceCardProps) => {
         <text>({year})</text>
       </div>
 
-      <Text className="pl-5 mb-auto" flow>{shortDescription}</Text>
+      <Text className="pl-5 mb-auto" flow center={false}>{shortDescription}</Text>
 
       <ExperienceModal title={title}/>
     </div>

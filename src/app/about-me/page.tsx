@@ -20,6 +20,7 @@ import {
 import Link from "next/link";
 import {EXPERIENCE} from "@/data/experience";
 import ExperienceCard from "@/app/about-me/experience-card";
+import classNames from "@/util/classNames";
 
 const AboutMePage = () => {
   return (
@@ -105,27 +106,25 @@ const AboutMePage = () => {
 
         <Container flow className="h-full bg-background rounded-xl p-5">
           <Title>My personal projects</Title>
-          <Container responsive>
-            <div>
-              <Text>
-                As I&apos;ve already said, I do programming as a hobby too.
-                If you are interested into checking out some of my work. Feel free to check out my GitHub.
-              </Text>
-            </div>
-            <Link
-              href="https://github.com/local-interloper/"
-              className="flex flex-col items-center justify-center bg-background-light hover:bg-background-dark rounded-xl shadow h-32 w-32"
-              target="_blank"
-            >
-              <SiGithub size={80} />
-              <Text>My Projects</Text>
-            </Link>
-          </Container>
+          <Link
+            href="https://github.com/local-interloper/"
+            className={classNames(
+              "flex flex-col items-center justify-center bg-background-light hover:bg-background-dark rounded-xl"
+              ,"shadow h-32 w-32 hover:scale-110 transition-all duration-200"
+            )}
+            target="_blank"
+          >
+            <SiGithub size={80} />
+            <Text>Browse</Text>
+          </Link>
+          <Text>
+            As I&apos;ve already said, I do programming as a hobby too.
+            If you are interested into checking out some of my work. Feel free to check out my GitHub.
+          </Text>
         </Container>
-
-        <Container flow className="h-full bg-background rounded-xl p-5">
+        <Container flow className="h-full p-5">
           <Title>Experience</Title>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {EXPERIENCE.map((experience, i) => <ExperienceCard key={i} experience={experience} />)}
           </div>
         </Container>

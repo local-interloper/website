@@ -3,7 +3,6 @@ import Container from "@/components/_core/containers/container";
 import Title from "@/components/_core/text/title";
 import Image from "next/image";
 import ProfilePicture from "@assets/pfp.png";
-import TextWrapper from "@/components/_core/containers/text-wrapper";
 import {SOCIAL} from "@/data/social";
 import Link from "next/link";
 import classNames from "@/util/classNames";
@@ -22,7 +21,7 @@ const Home = () => {
                     key={i}
                     href={href}
                     className={classNames("p-2 bg-background-light rounded-full shadow",
-                      "hover:bg-background-dark transition-all duration-200"
+                      "hover:bg-background-dark transition-all duration-200 hover:scale-110"
                     )}
                     target="_blank"
                   >
