@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5,
   },
+  /*
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
       url: "/logo.png"
     }
   },
+  */
   robots: {
     index: true,
     follow: true,
@@ -62,9 +64,11 @@ export const metadata: Metadata = {
     url: baseUrl,
     title: appName,
     description: description,
+    /*
     images: [
       {url: "/logo.png", width: 192, height: 192, alt: "App logo"}
     ],
+    */
     locale: "en_US",
     type: "website"
   },
