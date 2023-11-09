@@ -8,7 +8,7 @@ import Menu from "@/components/_core/menu";
 const inter = Inter({subsets: ['latin']});
 
 const appName = "local.interloper";
-const description = "An information HUB for everything me related";
+const description = "A hub for all my contacts, services and more";
 const baseUrl = "https://local.interloper.me";
 
 export const metadata: Metadata = {

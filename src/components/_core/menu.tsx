@@ -62,7 +62,7 @@ const Menu = () => {
         className="fixed top-0 right-0 z-40 p-3"
       >
         <div
-          className="p-2 cursor-pointer bg-background-light rounded-xl shadow"
+          className="p-1 cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -70,7 +70,7 @@ const Menu = () => {
           ) : (
             <GiHamburgerMenu className="text-3xl lg:text-6xl" />
           )}
-        </div>
+         </div>
       </div>
     </>
   );
