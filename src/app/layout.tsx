@@ -35,17 +35,15 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5,
   },
-  /*
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
     other: {
       rel: "apple-touch-icon-precompressed",
-      url: "/logo.png"
+      url: "/icon.png"
     }
   },
-  */
   robots: {
     index: true,
     follow: true,
@@ -64,11 +62,9 @@ export const metadata: Metadata = {
     url: baseUrl,
     title: appName,
     description: description,
-    /*
     images: [
-      {url: "/logo.png", width: 192, height: 192, alt: "App logo"}
+      {url: "/icon.png", width: 640, height: 640, alt: "App logo"}
     ],
-    */
     locale: "en_US",
     type: "website"
   },
