@@ -75,7 +75,7 @@ const RootLayout = ({children}: IChildrenProps) => {
     <html lang="en">
     <body
       className={classNames(
-        "w-screen h-[100svh] bg-background-dark text-text",
+        "w-screen h-[100svh] bg-code backdrop-blur-sm text-text",
         inter.className
       )}
     >
