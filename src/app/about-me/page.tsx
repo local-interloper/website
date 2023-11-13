@@ -21,6 +21,7 @@ import Link from "next/link";
 import {EXPERIENCE} from "@/data/experience";
 import ExperienceCard from "@/app/about-me/experience-card";
 import classNames from "@/util/classNames";
+import {ABOUT} from "@/data/about";
 
 const TECHNOLOGIES = [
   SiNextdotjs,
@@ -53,7 +54,7 @@ const LANGUAGES = [
 const AboutMePage = () => {
   return (
     <PageWrapper className="pb-10">
-      <Container className="h-full w-full bg-background shadow p-5">
+      <Container className="h-full w-full shadow p-5">
         <Title>About me</Title>
         <div className="flex gap-5 items-center">
           <TextWrapper>
@@ -61,20 +62,15 @@ const AboutMePage = () => {
             <Text>Age: 23</Text>
             <Text>Country: Croatia</Text>
           </TextWrapper>
-          <Image src={ProfilePicture} alt="Profile Picture" className="h-32 w-32 rounded-full shadow" />
+          <Image
+            src={ProfilePicture}
+            alt="Profile Picture"
+            className="h-32 w-32 rounded-full shadow border-2 border-primary"
+          />
         </div>
         <Container className="h-full p-2">
           <TextWrapper>
-            <Text>
-              I am a 23 year old fella from Croatia that&apos;s been into programming for quite a while now. I have a
-              bunch of personal and commercial projects under my belt at this point as programming is not only my
-              career but also a hobby.
-            </Text>
-            <Text>
-              By nature I&apos;m one hella curious guy. This nudged me into developing a very diverse skill set and
-              made
-              me very adaptable by nature.
-            </Text>
+            {ABOUT.map((text,i) => <Text key={i}>{text}</Text>)}
           </TextWrapper>
         </Container>
       </Container>
@@ -112,13 +108,13 @@ const AboutMePage = () => {
         </Container>
       </Container>
 
-      <Container flow className="h-full bg-background p-5">
+      <Container flow className="h-full p-5">
         <Title>My personal projects</Title>
         <Link
           href="https://github.com/local-interloper/"
           className={classNames(
-            "flex flex-col items-center justify-center bg-background-light hover:bg-background-dark rounded-xl"
-            , "shadow h-32 w-32 hover:scale-110 transition-all duration-200"
+            "flex flex-col items-center justify-center bg-background-light rounded-xl border-2 border-primary",
+            "shadow h-32 w-32 lg:hover:scale-110 hover:bg-background-light transition-all duration-200"
           )}
           target="_blank"
         >

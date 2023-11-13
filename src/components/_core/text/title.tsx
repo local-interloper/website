@@ -18,7 +18,7 @@ const Title = ({size = "md", center = true, className, children}: ITitleProps) =
   return (
     <p
       className={classNames(
-        "w-full",
+        "w-full text-primary",
         center && "text-center",
         titleSizes[size],
         className)

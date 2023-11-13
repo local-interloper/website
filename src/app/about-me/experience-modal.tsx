@@ -27,7 +27,7 @@ const ExperienceModal = ({title: entryTitle}: IExperienceModalProps) => {
   return (
     <>
       <button
-        className="p-2 rounded-xl border-2 border-primary hover:bg-primary transition-all duration-200 w-20"
+        className="p-2 rounded-xl border-2 border-primary lg:hover:scale-110 transition-all duration-200 w-40"
         onClick={() => setShow(true)}
       >
         <Text flow>Details</Text>
