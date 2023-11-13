@@ -54,7 +54,7 @@ const LANGUAGES = [
 const AboutMePage = () => {
   return (
     <PageWrapper className="pb-10">
-      <Container className="h-full w-full shadow p-5">
+      <Container className="w-full shadow p-5">
         <Title>About me</Title>
         <div className="flex gap-5 items-center">
           <TextWrapper>
@@ -75,7 +75,7 @@ const AboutMePage = () => {
         </Container>
       </Container>
 
-      <Container responsive flow className="h-full p-5">
+      <Container responsive flow className="p-5">
         <Container flow>
           <Title>Languages:</Title>
           <div className="flex flex-col justify-center h-full">
