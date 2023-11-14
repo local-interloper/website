@@ -74,13 +74,6 @@ export const metadata: Metadata = {
 const RootLayout = ({children}: IChildrenProps) => {
   return (
     <html lang="en">
-    <Head>
-      <link
-        rel="preload"
-        href="/background.png"
-        as="image"
-      />
-    </Head>
     <body
       className={classNames(
         "w-screen h-[100svh] bg-code backdrop-blur-sm text-text",
