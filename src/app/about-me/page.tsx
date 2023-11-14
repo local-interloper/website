@@ -9,7 +9,7 @@ import {TbSql} from "react-icons/tb";
 import {
   SiC,
   SiCsharp, SiDotnet, SiElectron, SiGit, SiGithub, SiGodotengine, SiHaxe,
-  SiJavascript, SiJetbrains, SiLinux,
+  SiJavascript, SiLinux,
   SiLua,
   SiNextdotjs, SiNodedotjs, SiPostgresql,
   SiPython, SiReact,
