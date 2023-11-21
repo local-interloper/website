@@ -77,12 +77,12 @@ const RootLayout = ({children}: IChildrenProps) => {
     <html lang="en">
     <body
       className={classNames(
-        "w-screen h-[100svh] backdrop-blur-sm text-text",
+        "relative w-screen h-[100svh] backdrop-blur-sm text-text bg-black",
         inter.className
       )}
     >
     <Menu />
-    <div className="w-screen h-[100svh] bg-black bg-opacity-90">
+    <div className="relative w-screen h-screen">
       <Image
         src={BgImage}
         alt="Backgorund"
@@ -91,7 +91,8 @@ const RootLayout = ({children}: IChildrenProps) => {
         fill
         style={{
           objectFit: "cover",
-          opacity: 1
+          opacity: 0.125,
+          filter: "blur(2px)"
         }}
       />
       {children}
