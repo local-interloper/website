@@ -4,6 +4,8 @@ import {Inter} from 'next/font/google';
 import IChildrenProps from "@/interfaces/children-props";
 import classNames from "@/util/classNames";
 import Menu from "@/components/_core/menu";
+import BgImage from "@assets/background.png";
+import Image from "next/image";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -75,12 +77,26 @@ const RootLayout = ({children}: IChildrenProps) => {
     <html lang="en">
     <body
       className={classNames(
-        "w-screen h-[100svh] bg-code backdrop-blur-sm text-text",
+        "relative w-screen h-[100svh] backdrop-blur-sm text-text bg-black",
         inter.className
       )}
     >
     <Menu />
-    {children}
+    <div className="relative w-screen h-screen">
+      <Image
+        src={BgImage}
+        alt="Backgorund"
+        className="-z-10"
+        priority
+        fill
+        style={{
+          objectFit: "cover",
+          opacity: 0.125,
+          filter: "blur(2px)"
+        }}
+      />
+      {children}
+    </div>
     </body>
     </html>
   );

@@ -15,14 +15,14 @@ const Modal = ({show, fullscreen, className, children}: IModalProps) => {
     <Transition
       show={show}
       enter="transition-all duration-500"
-      enterFrom="bg-black/[0.0]"
-      enterTo="bg-black/[0.5]"
+      enterFrom="bg-opacity-0"
+      enterTo="bg-opacity-90"
       leave="transition-all duration-500"
-      leaveFrom="bg-black/[0.5]"
-      leaveTo="bg-black/[0.0]"
+      leaveFrom="bg-opacity-90"
+      leaveTo="bg-opacity-0"
 
       className={classNames(
-        "fixed top-0 left-0 w-full h-[100svh] z-40 flex justify-center items-center",
+        "fixed top-0 left-0 w-full h-[100svh] z-40 flex justify-center items-center bg-black overflow-hidden",
         className
       )}
     >
@@ -39,7 +39,7 @@ const Modal = ({show, fullscreen, className, children}: IModalProps) => {
           className={
             classNames(
               "w-full h-full bg-background p-5",
-              !fullscreen && "max-w-6xl lg:max-h-[80svh] lg:rounded-xl"
+              !fullscreen && "max-w-6xl lg:max-h-[80svh] lg:rounded-xl border-2 border-primary/[0.25]"
             )
           }
         >
