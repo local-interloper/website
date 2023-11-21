@@ -18,9 +18,6 @@ const config: Config = {
         "primary": "#FB7E14",
       }
     },
-    backgroundImage: {
-      'code': "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/background.png)"
-    }
   },
   plugins: [],
 };

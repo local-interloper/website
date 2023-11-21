@@ -12,7 +12,7 @@ const Home = () => {
     <PageWrapper>
       <Container screen>
         <Container responsive flow={false}>
-          <div className="flex items-center flex-col-reverse lg:flex-row gap-10">
+          <div className="flex items-center flex-col-reverse lg:flex-row gap-10 select-none">
             <div className="flex flex-col gap-5">
               <Title className="font-bold" size="sm">local.interloper</Title>
               <div className="flex justify-center w-full gap-5">
