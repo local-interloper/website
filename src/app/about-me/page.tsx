@@ -22,6 +22,7 @@ import {EXPERIENCE} from "@/data/experience";
 import ExperienceCard from "@/app/about-me/experience-card";
 import classNames from "@/util/classNames";
 import {ABOUT} from "@/data/about";
+import IconDisplay from "@/app/about-me/icon-display";
 
 const TECHNOLOGIES = [
   SiNextdotjs,
@@ -70,7 +71,7 @@ const AboutMePage = () => {
         </div>
         <Container className="h-full p-2">
           <TextWrapper>
-            {ABOUT.map((text,i) => <Text key={i}>{text}</Text>)}
+            {ABOUT.map((text, i) => <Text key={i}>{text}</Text>)}
           </TextWrapper>
         </Container>
       </Container>
@@ -80,14 +81,7 @@ const AboutMePage = () => {
           <Title>Languages:</Title>
           <div className="flex flex-col justify-center h-full">
             <div className="grid grid-cols-3 gap-2">
-              {LANGUAGES.map((Icon, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-center flex-col w-24 h-24 bg-background-light shadow rounded-xl"
-                >
-                  <Icon size={40} />
-                </div>
-              ))}
+              {LANGUAGES.map((Icon, i) => <IconDisplay key={i} Icon={Icon} />)}
             </div>
           </div>
         </Container>
@@ -95,14 +89,7 @@ const AboutMePage = () => {
           <Title>Technologies:</Title>
           <div className="flex flex-col justify-center h-full">
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
-              {TECHNOLOGIES.map((Icon, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-center flex-col w-24 h-24 bg-background-light shadow rounded-xl"
-                >
-                  <Icon size={40} />
-                </div>
-              ))}
+              {TECHNOLOGIES.map((Icon, i) => <IconDisplay key={i} Icon={Icon} />)}
             </div>
           </div>
         </Container>
@@ -113,8 +100,8 @@ const AboutMePage = () => {
         <Link
           href="https://github.com/local-interloper/"
           className={classNames(
-            "flex flex-col items-center justify-center bg-background-light rounded-xl border-2 border-primary",
-            "shadow h-32 w-32 lg:hover:scale-110 hover:bg-background-light transition-all duration-200"
+            "flex flex-col items-center justify-center bg-background rounded-xl border-2 border-primary",
+            "shadow h-32 w-32 lg:hover:scale-110 transition-all duration-200"
           )}
           target="_blank"
         >
