@@ -87,6 +87,7 @@ const RootLayout = ({children}: IChildrenProps) => {
         src={BgImage}
         alt="Backgorund"
         className="-z-10"
+        priority
         fill
         style={{
           objectFit: "cover",
