@@ -1,8 +1,4 @@
-import Title from "@/components/_core/text/title";
-import Text from "@/components/_core/text/text";
 import {IExperience} from "@/data/experience";
-import ExperienceModal from "@/app/about-me/experience-modal";
-import classNames from "@/util/classNames";
 
 interface IExperienceCardProps {
   experience: IExperience;
@@ -12,19 +8,42 @@ const ExperienceCard = ({experience}: IExperienceCardProps) => {
   const {
     title,
     year,
-    shortDescription
+    description,
+    techStack,
+    client
   } = experience;
 
   return (
-    <div className="flex flex-col gap-5 p-5 w-full rounded-xl bg-background shadow border-2 border-primary/[0.25]">
-      <div className="flex justify-between">
-        <Title center={false}>{title}</Title>
-        <text>({year})</text>
+    <div className="collapse bg-base-200">
+      <input type="checkbox" />
+      <div className="collapse-title text-xl font-medium">
+        <div className="flex justify-between w-full">
+          <p>{title}</p>
+          <p>({year})</p>
+        </div>
       </div>
+      <div className="collapse-content bg-base-200/50">
+        <p>{description}</p>
 
-      <Text className="pl-5 mb-auto" flow center={false}>{shortDescription}</Text>
-
-      <ExperienceModal title={title} />
+        <div className="flex justify-between w-full mt-5 text-center">
+          <div>
+            <p>Technologies used:</p>
+            <div className="flex gap-1 w-full justify-center">
+              {techStack.map((Icon, i) => (
+                <Icon key={i} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <p>Client:</p>
+            {client ? (
+              <p>{client.name}</p>
+            ) : (
+              <p>Unspecified</p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

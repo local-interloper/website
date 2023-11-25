@@ -74,29 +74,15 @@ export const metadata: Metadata = {
 
 const RootLayout = ({children}: IChildrenProps) => {
   return (
-    <html lang="en">
+    <html data-theme="dark" lang="en">
     <body
       className={classNames(
-        "relative w-screen h-[100svh] backdrop-blur-sm text-text bg-black",
+        "relative w-screen h-[100svh] backdrop-blur-sm text-text bg-base-300",
         inter.className
       )}
     >
+    {children}
     <Menu />
-    <div className="relative w-screen h-screen">
-      <Image
-        src={BgImage}
-        alt="Backgorund"
-        className="-z-10"
-        priority
-        fill
-        style={{
-          objectFit: "cover",
-          opacity: 0.125,
-          filter: "blur(2px)"
-        }}
-      />
-      {children}
-    </div>
     </body>
     </html>
   );
