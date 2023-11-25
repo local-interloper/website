@@ -8,10 +8,7 @@ interface IconDisplayProps {
 const IconDisplay = ({Icon}: IconDisplayProps) => {
   return (
     <div
-      className={classNames(
-        "flex items-center justify-center flex-col w-24 h-24 bg-background shadow rounded-xl",
-        "border-2 border-primary/[0.25]"
-      )}
+      className="card card-bordered bg-base-200 p-2 shadow-xl"
     >
       <Icon size={40} />
     </div>

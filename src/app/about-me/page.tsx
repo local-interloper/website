@@ -20,7 +20,6 @@ import {
 import Link from "next/link";
 import {EXPERIENCE} from "@/data/experience";
 import ExperienceCard from "@/app/about-me/experience-card";
-import classNames from "@/util/classNames";
 import {ABOUT} from "@/data/about";
 import IconDisplay from "@/app/about-me/icon-display";
 
@@ -54,27 +53,26 @@ const LANGUAGES = [
 
 const AboutMePage = () => {
   return (
-    <PageWrapper className="pb-10">
-      <Container className="w-full shadow p-5">
-        <Title>About me</Title>
+    <PageWrapper className="py-20">
+      <Title>About Me</Title>
+      <div className="card card-body bg-base-200 shadow-xl">
         <div className="flex gap-5 items-center">
           <TextWrapper>
             <Text>local.interloper</Text>
             <Text>Age: 23</Text>
             <Text>Country: Croatia</Text>
           </TextWrapper>
-          <Image
-            src={ProfilePicture}
-            alt="Profile Picture"
-            className="h-32 w-32 rounded-full shadow border-2 border-primary"
-          />
+          <div className="avatar">
+            <div className="mask mask-squircle w-32 shadow-xl">
+              <Image src={ProfilePicture} alt="Profile Picture" />
+            </div>
+          </div>
         </div>
-        <Container className="h-full p-2">
-          <TextWrapper>
-            {ABOUT.map((text, i) => <Text key={i}>{text}</Text>)}
-          </TextWrapper>
-        </Container>
-      </Container>
+      </div>
+
+      <TextWrapper className="p-2">
+        {ABOUT.map((text, i) => <Text key={i}>{text}</Text>)}
+      </TextWrapper>
 
       <Container responsive flow className="p-5">
         <Container flow>
@@ -95,29 +93,28 @@ const AboutMePage = () => {
         </Container>
       </Container>
 
-      <Container flow className="h-full p-5">
-        <Title>My personal projects</Title>
-        <Link
-          href="https://github.com/local-interloper/"
-          className={classNames(
-            "flex flex-col items-center justify-center bg-background rounded-xl border-2 border-primary",
-            "shadow h-32 w-32 lg:hover:scale-110 transition-all duration-200"
-          )}
-          target="_blank"
-        >
-          <SiGithub size={80} />
-          <Text>Browse</Text>
-        </Link>
-        <Text>
-          As I&apos;ve already said, I do programming as a hobby too.
-          If you are interested into checking out some of my work. Feel free to check out my GitHub.
-        </Text>
-      </Container>
+      <div className="p-2">
+        <div className="flex flex-col gap-5 items-center card bg-base-200 p-10 shadow-xl">
+          <Title>My personal projects</Title>
+          <Link
+            href="https://github.com/local-interloper/"
+            className="btn btn-lg btn-circle btn-outline btn-primary"
+            target="_blank"
+          >
+            <SiGithub className="text-4xl" />
+          </Link>
+          <Text>
+            As I&apos;ve already said, I do programming as a hobby too.
+            If you are interested into checking out some of my work. Feel free to check out my GitHub.
+          </Text>
+        </div>
+      </div>
+
       <Container flow className="p-5">
         <Title>Experience</Title>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {EXPERIENCE.map((experience, i) => <ExperienceCard key={i} experience={experience} />)}
-        </div>
+        {EXPERIENCE.map((experience, i) => (
+          <ExperienceCard key={i} experience={experience} />
+        ))}
       </Container>
     </PageWrapper>
   );

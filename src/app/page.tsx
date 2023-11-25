@@ -12,17 +12,15 @@ const Home = () => {
     <PageWrapper>
       <Container screen>
         <Container responsive flow={false}>
-          <div className="flex items-center flex-col-reverse lg:flex-row gap-10 select-none">
+          <div className="flex items-center flex-col-reverse lg:flex-row gap-5 select-none">
             <div className="flex flex-col gap-5">
-              <Title className="font-bold" size="sm">local.interloper</Title>
+              <p className="text-primary text-3xl font-bold text-center">local.interloper</p>
               <div className="flex justify-center w-full gap-5">
                 {SOCIAL.map(({Icon, href}, i) => (
                   <Link
                     key={i}
                     href={href}
-                    className={classNames("p-3 rounded-full bg-background shadow border-2 border-primary",
-                      "hover:bg-background-light transition-all duration-200 lg:hover:scale-110"
-                    )}
+                    className="btn btn-circle btn-outline btn-primary"
                     target="_blank"
                   >
                     <Icon size={30} />
@@ -30,10 +28,11 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <Image
-              src={ProfilePicture} alt="Profile Picture"
-              className="w-36 h-36 rounded-full shadow border-2 border-primary"
-            />
+            <div className="avatar">
+              <div className="w-24 mask mask-squircle shadow-xl">
+                <Image src={ProfilePicture} alt="Profile Picture" />
+              </div>
+            </div>
           </div>
         </Container>
       </Container>
