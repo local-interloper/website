@@ -2,22 +2,21 @@ import PageWrapper from "@/components/_core/containers/page-wrapper";
 import Title from "@/components/_core/text/title";
 import Text from "@/components/_core/text/text";
 import {getImageUrl, getRecentGames} from "@/util/steam";
-import {cache} from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const GamesPage = cache(async () => {
+const GamesPage = async () => {
   const games = (await getRecentGames())?.slice(0, 8);
 
   return (
     <PageWrapper className="py-20">
       <Title>Games</Title>
       <Text>Lately I&apos;ve been playing:</Text>
-      <div className="grid gric-cols-1 lg:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {games && (games.map(({appid, name, img_icon_url, playtime_2weeks}, i) => (
           <Link
             href={`https://store.steampowered.com/app/${appid}`}
-            className="btn card justify-start flex flex-row gap-5 items-center p-2 bg-base-200 shadow-xl"
+            className="btn card flex justify-start flex-row gap-5 items-center p-2 bg-base-200 shadow-xl"
             key={i}
             target="_blank"
           >
@@ -37,6 +36,6 @@ const GamesPage = cache(async () => {
       </div>
     </PageWrapper>
   );
-});
+};
 
 export default GamesPage;

@@ -23,3 +23,15 @@ export const getRecentGames = cache(async (): Promise<SteamRecentGame[] | undefi
 
   return data.response.games;
 });
+
+export const getGames = cache(async (): Promise<SteamRecentGame[] | undefined> => {
+  const response = await fetch(URL);
+
+  if (!response.ok) {
+    return;
+  }
+
+  const data = await response.json() as SteamRecentGamesResponse;
+
+  return data.response.games;
+});
