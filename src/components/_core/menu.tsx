@@ -5,12 +5,18 @@ import {BsPerson} from "react-icons/bs";
 import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
+import {GiConsoleController} from "react-icons/gi";
 
 const OPTIONS = [
   {
     text: "Home",
     Icon: BiHome,
     href: "/"
+  },
+  {
+    text: "Games",
+    Icon: GiConsoleController,
+    href: "/games"
   },
   {
     text: "About me",
