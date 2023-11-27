@@ -6,6 +6,7 @@ import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
 import {GiConsoleController} from "react-icons/gi";
+import {AiFillExperiment} from "react-icons/ai";
 
 const OPTIONS = [
   {
@@ -14,9 +15,9 @@ const OPTIONS = [
     href: "/"
   },
   {
-    text: "Games",
-    Icon: GiConsoleController,
-    href: "/games"
+    text: "Projects",
+    Icon: AiFillExperiment,
+    href: "/projects"
   },
   {
     text: "About me",

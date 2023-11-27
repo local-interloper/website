@@ -8,10 +8,6 @@ interface FavoriteCardProps {
   appid: number;
 }
 
-const SCALE = 0.4;
-const WIDTH = Math.floor(460 * SCALE);
-const HEIGHT = Math.round(245 * SCALE);
-
 const FavoriteCard = async ({appid}: FavoriteCardProps) => {
   const details = await getAppDetails(appid);
 
