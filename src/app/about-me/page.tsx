@@ -112,9 +112,11 @@ const AboutMePage = () => {
 
       <Container flow className="p-5">
         <Title>Experience</Title>
-        {EXPERIENCE.map((experience, i) => (
-          <ExperienceCard key={i} experience={experience} />
-        ))}
+        <div className="flex flex-col gap-2">
+          {EXPERIENCE.map((experience, i) => (
+            <ExperienceCard key={i} experience={experience} />
+          ))}
+        </div>
       </Container>
     </PageWrapper>
   );
