@@ -1,3 +1,5 @@
+import "server-only"
+
 import {GitHubRepo} from "@/interfaces/github";
 import {cache} from "react";
 
