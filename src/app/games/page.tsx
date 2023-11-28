@@ -32,7 +32,7 @@ const GamesPage = async () => {
               <Image src={player.avatarfull} alt="Steam avatar" width={128} height={128} />
             </div>
           </div>
-          <Text>{player.personaname}</Text>
+          <p className="text-3xl">{player.personaname}</p>
           <div className="stat">
             <div className="stat-value">
               {Math.floor(games.reduce((acc, game) => acc + game.playtime_forever / 60, 0))}

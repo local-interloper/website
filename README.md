@@ -1,4 +1,3 @@
-# next-boilerplate
+# local.interloper's website
 
-This repo serves as an opinionated foundation for creating new projects with next. It allows me to quickly get started with 
-a new project. The default generated project has been modified to follow some of my personal preferences.
+This repo contains the full source code of my website. Feel free to take a look around or fork it.

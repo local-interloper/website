@@ -6,12 +6,19 @@ import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
 import {GiConsoleController} from "react-icons/gi";
+import {AiFillExperiment} from "react-icons/ai";
+import {SiGithub} from "react-icons/si";
 
 const OPTIONS = [
   {
     text: "Home",
     Icon: BiHome,
     href: "/"
+  },
+  {
+    text: "Projects",
+    Icon: SiGithub,
+    href: "/projects"
   },
   {
     text: "Games",
