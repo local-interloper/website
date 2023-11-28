@@ -5,9 +5,7 @@ import {BsPerson} from "react-icons/bs";
 import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
-import {GiConsoleController} from "react-icons/gi";
-import {AiFillExperiment} from "react-icons/ai";
-import {SiGithub} from "react-icons/si";
+import {SiGithub, SiSteam} from "react-icons/si";
 
 const OPTIONS = [
   {
@@ -16,14 +14,14 @@ const OPTIONS = [
     href: "/"
   },
   {
-    text: "Projects",
+    text: "Github",
     Icon: SiGithub,
-    href: "/projects"
+    href: "/github"
   },
   {
     text: "Games",
-    Icon: GiConsoleController,
-    href: "/games"
+    Icon: SiSteam,
+    href: "/steam"
   },
   {
     text: "About me",

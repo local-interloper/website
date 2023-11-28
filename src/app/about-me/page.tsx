@@ -97,9 +97,8 @@ const AboutMePage = () => {
         <div className="flex flex-col gap-5 items-center card bg-base-200 p-10 shadow-xl">
           <Title>My personal projects</Title>
           <Link
-            href="https://github.com/local-interloper/"
+            href="/github"
             className="btn btn-lg btn-circle btn-outline btn-primary"
-            target="_blank"
           >
             <SiGithub className="text-4xl" />
           </Link>

@@ -29,7 +29,11 @@ const RepoCard = ({repo: {name, language, html_url, description}}: RepoCardProps
     >
       <p className="card-title">{name}</p>
       <div className="card-normal">
-        <p>{description}</p>
+        {description ? (
+          <p>{description}</p>
+        ) : (
+          <p>¯\_(ツ)_/¯</p>
+        )}
       </div>
       <div className="absolute flex items-center gap-2 bottom-2 right-2">
         <p>Language:</p>
