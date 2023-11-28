@@ -7,6 +7,7 @@ import classNames from "@/util/classNames";
 import Link from "next/link";
 import {GiConsoleController} from "react-icons/gi";
 import {AiFillExperiment} from "react-icons/ai";
+import {SiGithub} from "react-icons/si";
 
 const OPTIONS = [
   {
@@ -16,8 +17,13 @@ const OPTIONS = [
   },
   {
     text: "Projects",
-    Icon: AiFillExperiment,
+    Icon: SiGithub,
     href: "/projects"
+  },
+  {
+    text: "Games",
+    Icon: GiConsoleController,
+    href: "/games"
   },
   {
     text: "About me",
