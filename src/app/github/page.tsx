@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/_core/containers/page-wrapper";
 import Title from "@/components/_core/text/title";
 import {getGitHubRepos} from "@/util/github";
-import RepoCard from "@/app/projects/repo-card";
+import RepoCard from "@/app/github/repo-card";
 
 const ProjectsPage = async () => {
   const repos = (await getGitHubRepos())
@@ -13,9 +13,13 @@ const ProjectsPage = async () => {
 
   return (
     <PageWrapper className="py-20">
-      <Title>Projects</Title>
-      <div className="flex items-center gap-2">
-        <div className="stat">
+      <Title>GitHub</Title>
+      <div className="flex items-center justify-center flex-col lg:flex-row gap-2 p-2">
+        <p className="text-xl text-center lg:text-right max-w-lg">
+          Welcome to my dump of open source projects, prototypes and unmaintained code.
+          Enjoy your stay!
+        </p>
+        <div className="stat max-w-sm">
           <div className="stat-title">Total public repos</div>
           <div className="stat-value">{repos.length}</div>
           <div className="stat-desc">{recentPushes} recently updated</div>

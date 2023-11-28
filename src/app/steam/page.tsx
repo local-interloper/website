@@ -4,7 +4,7 @@ import Text from "@/components/_core/text/text";
 import {getImageUrl, getOwnedGames, getPlayerSummary, getRecentGames} from "@/util/steam";
 import Image from "next/image";
 import Link from "next/link";
-import FavoriteCard from "@/app/games/favorite-card";
+import FavoriteCard from "@/app/steam/favorite-card";
 
 const GamesPage = async () => {
   const recentGames = (await getRecentGames())?.slice(0, 6);
@@ -53,7 +53,7 @@ const GamesPage = async () => {
         <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
           <Title>Favorites</Title>
           <div className="flex flex-col h-full justify-center">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
               {FAVORITES.map((appid, i) => (
                 <FavoriteCard key={i} appid={appid} />
               ))}
@@ -63,29 +63,27 @@ const GamesPage = async () => {
         <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
           <Title>Recent</Title>
           <Text>Lately I&apos;ve been playing:</Text>
-          <div className="flex flex-col h-full justify-center">
-            <div className="flex flex-col gap-5">
-              {recentGames.map(({appid, name, img_icon_url, playtime_2weeks}, i) => (
-                <Link
-                  href={`https://store.steampowered.com/app/${appid}`}
-                  className="btn card flex justify-start flex-row gap-5 items-center p-2 bg-base-100 shadow-xl"
-                  key={i}
-                  target="_blank"
-                >
-                  <Image
-                    src={getImageUrl(appid, img_icon_url)}
-                    className="rounded-full"
-                    alt={`${name} icon`}
-                    width={32}
-                    height={32}
-                  />
-                  <div className="flex flex-col items-start gap-1">
-                    <p>{name}</p>
-                    <p className="text-primary">{Math.floor(playtime_2weeks / 60)}hrs</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+          <div className="flex flex-col gap-5">
+            {recentGames.map(({appid, name, img_icon_url, playtime_2weeks}, i) => (
+              <Link
+                href={`https://store.steampowered.com/app/${appid}`}
+                className="btn card flex justify-start flex-row gap-5 items-center p-2 bg-base-100 shadow-xl"
+                key={i}
+                target="_blank"
+              >
+                <Image
+                  src={getImageUrl(appid, img_icon_url)}
+                  className="rounded-full"
+                  alt={`${name} icon`}
+                  width={32}
+                  height={32}
+                />
+                <div className="flex flex-col items-start gap-1">
+                  <p>{name}</p>
+                  <p className="text-primary">{Math.floor(playtime_2weeks / 60)}hrs</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
