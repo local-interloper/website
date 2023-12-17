@@ -6,6 +6,7 @@ import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
 import {SiGithub, SiSteam} from "react-icons/si";
+import {SlPicture} from "react-icons/sl";
 
 const OPTIONS = [
   {
@@ -22,6 +23,11 @@ const OPTIONS = [
     text: "Games",
     Icon: SiSteam,
     href: "/steam"
+  },
+  {
+    text: "Github",
+    Icon: SlPicture,
+    href: "/gallery"
   },
   {
     text: "About me",
