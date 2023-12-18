@@ -23,8 +23,8 @@ const GamesPage = async () => {
   ];
 
   return (
-    <PageWrapper className="p-5 pb-20">
-      <div className="flex flex-col lg:flex-row w-full gap-5">
+    <PageWrapper className="p-5">
+      <div className="flex flex-col lg:flex-row w-full gap-5 h-full">
         <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
           <Title>Steam</Title>
           <div className="avatar">
