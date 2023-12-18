@@ -12,7 +12,7 @@ const ProjectsPage = async () => {
     .reduce((a, c) => (Date.now() / 1000 - new Date(c.pushed_at).getTime() / 1000) < 604800 ? a + 1 : a, 0);
 
   return (
-    <PageWrapper className="py-20">
+    <PageWrapper className="pt-20">
       <Title>GitHub</Title>
       <div className="flex items-center justify-center flex-col lg:flex-row gap-2 p-2">
         <p className="text-xl text-center lg:text-right max-w-lg">
