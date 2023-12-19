@@ -23,9 +23,9 @@ const GamesPage = async () => {
   ];
 
   return (
-    <PageWrapper className="p-5">
-      <div className="flex flex-col lg:flex-row w-full gap-5 h-full">
-        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
+    <PageWrapper>
+      <div className="flex flex-col xl:flex-row w-full gap-5 xl:h-full p-5">
+        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 xl:h-full w-full shadow-xl">
           <Title>Steam</Title>
           <div className="avatar">
             <div className="mask mask-squircle">
@@ -50,17 +50,17 @@ const GamesPage = async () => {
             <div className="stat-desc">Years of service</div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
+        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 xl:h-full w-full shadow-xl">
           <Title>Favorites</Title>
-          <div className="flex flex-col h-full justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-5">
+          <div className="flex flex-col xl:h-full justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-5">
               {FAVORITES.map((appid, i) => (
                 <FavoriteCard key={i} appid={appid} />
               ))}
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 h-full w-full shadow-xl">
+        <div className="flex flex-col items-center gap-5 card bg-base-200 p-5 xl:w-full shadow-xl">
           <Title>Recent</Title>
           <Text>Lately I&apos;ve been playing:</Text>
           <div className="flex flex-col gap-5">
