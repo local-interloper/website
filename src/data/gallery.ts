@@ -1,6 +1,7 @@
 import Img1 from "@assets/gallery/sel.png"
 import Img2 from "@assets/gallery/cl.png"
 import Img3 from "@assets/gallery/akira.png"
+import Img4 from "@assets/gallery/kleiner.png"
 import {StaticImageData} from "next/image";
 
 export interface ImageData {
@@ -12,7 +13,7 @@ export interface ImageData {
 export const GALLERY_DATA: ImageData[] = [
   {
     image: Img1,
-    title: "Lain's room",
+    title: "Lain's Room",
     inspiration: "Serial Experiments Lain"
   },
   {
@@ -22,7 +23,12 @@ export const GALLERY_DATA: ImageData[] = [
   },
   {
     image: Img3,
-    title: "Akira elevator",
+    title: "Akira Elevator",
     inspiration: "Akira"
+  },
+  {
+    image: Img4,
+    title: "Dr. Kleiner's Lab",
+    inspiration: "Half-Life: 2"
   }
 ]
