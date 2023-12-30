@@ -80,7 +80,6 @@ const GamesPage = async () => {
                 />
                 <div className="flex flex-col items-start gap-1">
                   <p>{name}</p>
-                  <p className="text-primary">{Math.floor(playtime_2weeks / 60)}hrs</p>
                 </div>
               </Link>
             ))}
