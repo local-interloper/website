@@ -54,7 +54,7 @@ const LANGUAGES = [
 const AboutMePage = () => {
   return (
     <PageWrapper className="pt-20">
-      <Title>About Me</Title>
+      <Title bold>About Me</Title>
       <div className="card card-body bg-base-200 shadow-xl">
         <div className="flex gap-5 items-center">
           <TextWrapper>

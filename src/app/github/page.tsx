@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/_core/containers/page-wrapper";
 import Title from "@/components/_core/text/title";
-import {getGitHubRepos} from "@/util/github";
+import {getGitHubRepos} from "@/util/apis/github";
 import RepoCard from "@/app/github/repo-card";
 
 const ProjectsPage = async () => {
@@ -20,7 +20,7 @@ const ProjectsPage = async () => {
 
   return (
     <PageWrapper className="pt-20">
-      <Title>GitHub</Title>
+      <Title bold>GitHub</Title>
       <div className="flex items-center justify-center flex-col lg:flex-row gap-2 p-2">
         <p className="text-xl text-center lg:text-right max-w-lg">
           Welcome to my dump of open source projects, prototypes and unmaintained code.

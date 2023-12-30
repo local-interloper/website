@@ -22,7 +22,7 @@ const OPTIONS = [
   {
     text: "Games",
     Icon: SiSteam,
-    href: "/steam"
+    href: "/games"
   },
   {
     text: "Github",
