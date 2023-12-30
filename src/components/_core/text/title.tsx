@@ -12,14 +12,16 @@ const titleSizes: Record<Size, string> = {
 interface ITitleProps extends ClassnameProps, ChildrenProps {
   size?: Size;
   center?: boolean;
+  bold?: boolean;
 }
 
-const Title = ({size = "md", center = true, className, children}: ITitleProps) => {
+const Title = ({size = "md", center = true, bold = false, className, children}: ITitleProps) => {
   return (
     <p
       className={classNames(
         "w-full text-primary",
         center && "text-center",
+        bold && "font-bold",
         titleSizes[size],
         className)
       }

@@ -1,4 +1,4 @@
-import {getAppDetails} from "@/util/steam";
+import {getAppDetails} from "@/util/apis/steam";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "@/util/classNames";

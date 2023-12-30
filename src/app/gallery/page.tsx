@@ -7,7 +7,7 @@ import Text from "@/components/_core/text/text";
 const GalleryPage = () => {
   return (
     <PageWrapper className="pt-20">
-      <Title>Gallery</Title>
+      <Title bold>Gallery</Title>
       <Text>
         Here you can find some of my renders. It&apos;s something I do from time to time for fun.
       </Text>
