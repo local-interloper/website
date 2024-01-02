@@ -14,14 +14,6 @@ const nextConfig = {
         hostname: '**.steamstatic.com',
       },
     ]
-  },
-  rewrites: async () => {
-    return [
-      {
-        source: "/",
-        destination: "/home"
-      }
-    ]
   }
 };
 
