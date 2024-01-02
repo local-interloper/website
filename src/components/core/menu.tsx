@@ -7,6 +7,7 @@ import classNames from "@/util/classNames";
 import Link from "next/link";
 import {SiGithub, SiSteam} from "react-icons/si";
 import {SlPicture} from "react-icons/sl";
+import {MdLightbulb} from "react-icons/md";
 
 const OPTIONS = [
   {
@@ -15,19 +16,9 @@ const OPTIONS = [
     href: "/"
   },
   {
-    text: "Github",
-    Icon: SiGithub,
-    href: "/github"
-  },
-  {
-    text: "Games",
-    Icon: SiSteam,
-    href: "/games"
-  },
-  {
-    text: "Github",
-    Icon: SlPicture,
-    href: "/gallery"
+    text: "Hobbies",
+    Icon: MdLightbulb,
+    href: "/hobbies"
   },
   {
     text: "About me",
@@ -41,16 +32,17 @@ const Menu = () => {
 
   return (
     <div className="btm-nav">
-      {OPTIONS.map(({Icon, href}, i) => (
+      {OPTIONS.map(({Icon, href, text}, i) => (
         <Link
           href={href}
           key={i}
           className={classNames(
             "text-primary",
-            pathName === href && "active"
+            (href === "/" ? pathName === href : pathName.startsWith(href)) && "active"
           )}
         >
           <Icon className="text-xl" />
+          <p>{text}</p>
         </Link>
       ))}
     </div>

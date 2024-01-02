@@ -1,10 +1,10 @@
-import PageWrapper from "@/components/_core/containers/page-wrapper";
-import Container from "@/components/_core/containers/container";
-import Title from "@/components/_core/text/title";
-import Text from "@/components/_core/text/text";
+import PageWrapper from "@/components/core/containers/page-wrapper";
+import Container from "@/components/core/containers/container";
+import Title from "@/components/core/text/title";
+import Text from "@/components/core/text/text";
 import Image from "next/image";
 import ProfilePicture from "@assets/pfp.png";
-import TextWrapper from "@/components/_core/containers/text-wrapper";
+import TextWrapper from "@/components/core/containers/text-wrapper";
 import {TbSql} from "react-icons/tb";
 import {
   SiC,

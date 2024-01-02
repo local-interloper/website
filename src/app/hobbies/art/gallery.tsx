@@ -1,7 +1,7 @@
 "use client";
 
 import {GALLERY_DATA, ImageData} from "@/data/gallery";
-import GalleryEntry, {GalleryEntryProps} from "@/app/gallery/gallery-entry";
+import GalleryEntry, {GalleryEntryProps} from "@/app/hobbies/art/gallery-entry";
 import {useState} from "react";
 import Image, {StaticImageData} from "next/image";
 import {HiX} from "react-icons/hi";

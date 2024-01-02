@@ -1,6 +1,6 @@
 "use client";
 
-import Text from "@/components/_core/text/text";
+import Text from "@/components/core/text/text";
 import classNames from "@/util/classNames";
 import {useRouter} from "next/navigation";
 import {BUTTON_SIZEMAP} from "@/util/sizemaps";

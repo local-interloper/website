@@ -3,7 +3,7 @@ import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
 import IChildrenProps from "@/interfaces/children-props";
 import classNames from "@/util/classNames";
-import Menu from "@/components/_core/menu";
+import Menu from "@/components/core/menu";
 import BgImage from "@assets/background.png";
 import Image from "next/image";
 

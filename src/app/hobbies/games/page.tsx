@@ -1,10 +1,10 @@
-import PageWrapper from "@/components/_core/containers/page-wrapper";
-import Title from "@/components/_core/text/title";
-import Text from "@/components/_core/text/text";
+import PageWrapper from "@/components/core/containers/page-wrapper";
+import Title from "@/components/core/text/title";
+import Text from "@/components/core/text/text";
 import {getImageUrl, getOwnedGames, getPlayerSummary, getRecentGames} from "@/util/apis/steam";
 import Image from "next/image";
 import Link from "next/link";
-import FavoriteCard from "@/app/games/favorite-card";
+import FavoriteCard from "@/app/hobbies/games/favorite-card";
 
 const GamesPage = async () => {
   const recentGames = (await getRecentGames())?.slice(0, 6);
