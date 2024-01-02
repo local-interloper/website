@@ -1,4 +1,4 @@
-import Text from "@/components/_core/text/text";
+import Text from "@/components/core/text/text";
 
 interface IListProps {
   list: string[];

@@ -1,4 +1,4 @@
-import Text from "@/components/_core/text/text";
+import Text from "@/components/core/text/text";
 import classNames from "@/util/classNames";
 import Link from "next/link";
 import {useRouter} from "next/navigation";

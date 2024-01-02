@@ -1,6 +1,6 @@
 "use client";
 
-import LinkButton from "@/components/_core/link-button";
+import LinkButton from "@/components/core/link-button";
 
 const OPTIONS = [
   {
