@@ -1,16 +1,16 @@
-import PageWrapper from "@/components/_core/containers/page-wrapper";
-import Title from "@/components/_core/text/title";
+import PageWrapper from "@/components/core/containers/page-wrapper";
+import Title from "@/components/core/text/title";
 import {getGitHubRepos} from "@/util/apis/github";
-import RepoCard from "@/app/github/repo-card";
+import RepoCard from "@/app/hobbies/programming/repo-card";
 
-const ProjectsPage = async () => {
+const ProgrammingPage = async () => {
   const repos = (await getGitHubRepos())
     .filter(repo => !repo.fork)
     .sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
 
   return (
     <PageWrapper className="pt-20">
-      <Title bold>GitHub</Title>
+      <Title bold>Programming</Title>
       <div className="flex items-center justify-center flex-col lg:flex-row gap-2 p-2">
         <p className="text-xl text-center lg:text-right max-w-lg">
           Welcome to my dump of open source projects, prototypes and unmaintained code.
@@ -30,4 +30,4 @@ const ProjectsPage = async () => {
   );
 };
 
-export default ProjectsPage;
+export default ProgrammingPage;

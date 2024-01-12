@@ -1,11 +1,8 @@
-import PageWrapper from "@/components/_core/containers/page-wrapper";
-import Container from "@/components/_core/containers/container";
-import Title from "@/components/_core/text/title";
+import PageWrapper from "@/components/core/containers/page-wrapper";
 import Image from "next/image";
 import ProfilePicture from "@assets/pfp.png";
 import {SOCIAL} from "@/data/social";
 import Link from "next/link";
-import classNames from "@/util/classNames";
 
 const Home = () => {
   return (

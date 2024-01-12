@@ -6,7 +6,7 @@ import {cache} from "react";
 export const getGitHubRepos = cache(async (): Promise<GitHubRepo[]> => {
   const url = "https://api.github.com/users/local-interloper/repos";
 
-  const response = await fetch(url, {next: {revalidate: 86400}});
+  const response = await fetch(url, {next: {revalidate: 3600}});
 
   if (!response.ok) {
     return [];

@@ -1,10 +1,10 @@
-import PageWrapper from "@/components/_core/containers/page-wrapper";
-import Container from "@/components/_core/containers/container";
-import Title from "@/components/_core/text/title";
-import Text from "@/components/_core/text/text";
+import PageWrapper from "@/components/core/containers/page-wrapper";
+import Container from "@/components/core/containers/container";
+import Title from "@/components/core/text/title";
+import Text from "@/components/core/text/text";
 import Image from "next/image";
 import ProfilePicture from "@assets/pfp.png";
-import TextWrapper from "@/components/_core/containers/text-wrapper";
+import TextWrapper from "@/components/core/containers/text-wrapper";
 import {TbSql} from "react-icons/tb";
 import {
   SiC,
@@ -39,7 +39,6 @@ const TECHNOLOGIES = [
 ];
 
 const LANGUAGES = [
-
   SiTypescript,
   SiCsharp,
   SiRust,
@@ -55,17 +54,15 @@ const AboutMePage = () => {
   return (
     <PageWrapper className="pt-20">
       <Title bold>About Me</Title>
-      <div className="card card-body bg-base-200 shadow-xl">
-        <div className="flex gap-5 items-center">
-          <TextWrapper>
-            <Text>local.interloper</Text>
-            <Text>Age: 23</Text>
-            <Text>Country: Croatia</Text>
-          </TextWrapper>
-          <div className="avatar">
-            <div className="mask mask-squircle w-32 shadow-xl">
-              <Image src={ProfilePicture} alt="Profile Picture" />
-            </div>
+      <div className="card flex gap-5 items-center card-body flex-row bg-base-200 shadow-xl">
+        <TextWrapper>
+          <Text>local.interloper</Text>
+          <Text>Age: 23</Text>
+          <Text>Country: Croatia</Text>
+        </TextWrapper>
+        <div className="avatar">
+          <div className="mask mask-squircle w-32 shadow-xl">
+            <Image src={ProfilePicture} alt="Profile Picture" />
           </div>
         </div>
       </div>
