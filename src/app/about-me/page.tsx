@@ -39,7 +39,6 @@ const TECHNOLOGIES = [
 ];
 
 const LANGUAGES = [
-
   SiTypescript,
   SiCsharp,
   SiRust,
@@ -55,17 +54,15 @@ const AboutMePage = () => {
   return (
     <PageWrapper className="pt-20">
       <Title bold>About Me</Title>
-      <div className="card card-body bg-base-200 shadow-xl">
-        <div className="flex gap-5 items-center">
-          <TextWrapper>
-            <Text>local.interloper</Text>
-            <Text>Age: 23</Text>
-            <Text>Country: Croatia</Text>
-          </TextWrapper>
-          <div className="avatar">
-            <div className="mask mask-squircle w-32 shadow-xl">
-              <Image src={ProfilePicture} alt="Profile Picture" />
-            </div>
+      <div className="card flex gap-5 items-center card-body flex-row bg-base-200 shadow-xl">
+        <TextWrapper>
+          <Text>local.interloper</Text>
+          <Text>Age: 23</Text>
+          <Text>Country: Croatia</Text>
+        </TextWrapper>
+        <div className="avatar">
+          <div className="mask mask-squircle w-32 shadow-xl">
+            <Image src={ProfilePicture} alt="Profile Picture" />
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ const ExperienceCard = ({experience}: IExperienceCardProps) => {
         <div className="flex justify-between w-full mt-5 text-center">
           <div className="flex flex-col gap-1">
             <p>Technologies used:</p>
-            <div className="flex gap-1 w-full justify-center">
+            <div className="flex gap-2 w-full justify-center">
               {techStack.map((Icon, i) => (
                 <Icon key={i} />
               ))}
