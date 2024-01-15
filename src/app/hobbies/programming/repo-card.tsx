@@ -1,6 +1,6 @@
 import {GitHubRepo} from "@/interfaces/github";
 import {IconType} from "react-icons";
-import {SiC, SiCplusplus, SiCsharp, SiHaxe, SiJavascript, SiRust, SiTypescript} from "react-icons/si";
+import {SiC, SiCplusplus, SiCsharp, SiGo, SiHaxe, SiJavascript, SiRust, SiTypescript} from "react-icons/si";
 import Link from "next/link";
 import {BiQuestionMark} from "react-icons/bi";
 
@@ -13,6 +13,7 @@ const LANG_RECORD: Record<string, IconType> = {
   "C#": SiCsharp,
   "C++": SiCplusplus,
   "C": SiC,
+  "Go": SiGo,
   "Haxe": SiHaxe,
   "JavaScript": SiJavascript,
   "TypeScript": SiTypescript
