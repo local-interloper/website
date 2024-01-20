@@ -10,7 +10,7 @@ const IconDisplay = ({Icon}: IconDisplayProps) => {
     <div
       className="card card-bordered bg-base-200 p-2 shadow-xl"
     >
-      <Icon size={40} />
+      <Icon size={60} />
     </div>
   );
 };
