@@ -21,7 +21,7 @@ const FAVORITES = [
 const Favorites = () => {
   return (
     <Container responsive fill reverse className="px-5 py-20">
-      <div className="flex flex-col items-center justify-center w-full gap-5">
+      <div className="flex flex-col items-center justify-center w-full gap-10">
         <Title bold>Favorites</Title>
         <Text>
           These are some of my favorite games of all time. Each one of these brings something nice to the table, that
@@ -29,8 +29,8 @@ const Favorites = () => {
         </Text>
       </div>
       <div className="flex flex-col w-full justify-center items-center">
-        <div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="flex flex-col items-center justify-center">
+          <div className="grid grid-cols-3 gap-5">
             {FAVORITES.map((appid, i) => (
               <FavoriteCard key={i} appid={appid} />
             ))}

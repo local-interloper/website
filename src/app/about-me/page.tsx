@@ -24,6 +24,8 @@ import Languages from "@/app/about-me/programming-languages";
 import Hobbies from "@/app/about-me/hobbies";
 import Technologies from "@/app/about-me/technologies";
 import PersonalProjects from "@/app/about-me/personal-projects";
+import ScrollForMore from "@/components/core/scroll-for-more";
+import Experience from "@/app/about-me/experience";
 
 
 const AboutMePage = () => {
@@ -32,7 +34,7 @@ const AboutMePage = () => {
       <Container screen>
         <div className="flex flex-col gap-2 items-center select-none">
           <Title bold size="lg">About me</Title>
-          <Text>Scroll to get started</Text>
+          <ScrollForMore />
         </div>
       </Container>
 
@@ -47,14 +49,7 @@ const AboutMePage = () => {
 
       <PersonalProjects />
 
-      <Container flow className="p-5">
-        <Title>Experience</Title>
-        <div className="flex flex-col gap-2">
-          {EXPERIENCE.map((experience, i) => (
-            <ExperienceCard key={i} experience={experience} />
-          ))}
-        </div>
-      </Container>
+      <Experience />
     </PageWrapper>
   );
 };

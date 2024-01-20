@@ -1,6 +1,7 @@
 import {IExperience} from "@/data/experience";
 import Link from "next/link";
 import {TbWorld} from "react-icons/tb";
+import classNames from "@/util/classNames";
 
 interface IExperienceCardProps {
   experience: IExperience;
@@ -25,9 +26,12 @@ const ExperienceCard = ({experience}: IExperienceCardProps) => {
         </div>
       </div>
       <div className="collapse-content bg-base-200/50">
-        <p>{description}</p>
-
-        <div className="flex justify-between w-full mt-5 text-center">
+        <p className="px-5">{description}</p>
+        <div
+          className={classNames(
+            "flex flex-col lg:flex-row items-center lg:items-start justify-between w-full mt-5 text-center gap-5",
+          )}
+        >
           <div className="flex flex-col gap-1">
             <p>Technologies used:</p>
             <div className="flex gap-2 w-full justify-center">

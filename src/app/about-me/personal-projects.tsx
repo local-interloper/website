@@ -7,7 +7,7 @@ import Container from "@/components/core/containers/container";
 const PersonalProjects = () => {
   return (
     <Container responsive fill className="px-5 py-20">
-      <div className="flex flex-col gap-5 items-center w-full">
+      <div className="flex flex-col gap-10 items-center w-full">
         <Title bold size="lg">Personal projects</Title>
         <Text className="max-w-sm">
           Most of my publicly available work is in form of projects I&apos;ve decided to open source. If you are

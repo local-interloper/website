@@ -9,14 +9,13 @@ const SteamStats = async () => {
   const games = await getOwnedGames();
 
   return (
-    <Container responsive fill className="px-5 py-20">
-      <div className="flex flex-col items-center w-full gap-5">
+    <div className="flex flex-col lg:flex-row justify-center lg:items-center w-full px-10 py-20">
+      <div className="flex flex-col items-center w-full gap-10">
         <Title size="lg" bold>Steam</Title>
         <Text>
           Steam is my gaming platform of choice. I am an active member since 2012 and over the years I have accumulated
           a worrying number of games and hours played.
         </Text>
-
       </div>
       <div className="flex flex-col items-center gap-5 xl:h-full w-full">
         <div className="flex flex-col items-center justify-center h-full">
@@ -28,7 +27,7 @@ const SteamStats = async () => {
             </div>
             <p className="text-3xl">{player.personaname}</p>
           </div>
-          <div className="flex gap-2 justify-center w-full">
+          <div className="flex flex-col lg:flex-row gap-2 justify-center w-full">
             <div className="stat">
               <div className="stat-title">Hours played</div>
               <div className="stat-value">
@@ -48,7 +47,7 @@ const SteamStats = async () => {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

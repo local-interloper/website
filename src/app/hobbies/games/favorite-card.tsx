@@ -20,7 +20,7 @@ const FavoriteCard = async ({appid}: FavoriteCardProps) => {
       <Link
         href={`https://store.steampowered.com/app/${appid}`}
         className={classNames(
-          `relative w-44 h-24 shadow-xl  rounded-xl overflow-hidden`,
+          `relative w-28 h-16 lg:w-44 lg:h-24 shadow-xl  rounded-xl overflow-hidden`,
           "lg:hover:scale-110 transition-all duration-200"
         )}
         target="_blank"
