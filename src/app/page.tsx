@@ -12,7 +12,7 @@ const Home = () => {
         <div className="flex items-center flex-col-reverse lg:flex-row gap-5 select-none">
           <div className="flex flex-col gap-5">
             <Title className="text-primary text-3xl font-bold text-center">local.interloper</Title>
-            <div className="flex justify-center w-full gap-5">
+            <div className="flex justify-center w-full gap-5 text-primary">
               {SOCIAL.map(({Icon, href}, i) => (
                 <Link
                   key={i}
