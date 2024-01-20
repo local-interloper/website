@@ -14,7 +14,7 @@ const RecentGames = async () => {
         <Title bold>Recently played</Title>
         <Text>
           These are the titles I&apos;ve been playing recently. The list is dynamically updated using the data pulled
-          from steam (yes, that means if I was no-lifing something off steam like Starsector, it won't show up here).
+          from steam (yes, that means if I was no-lifing something off steam like Starsector, it won&apos;t show up here).
         </Text>
       </div>
       <div className="flex flex-col w-full justify-center items-center gap-5">
