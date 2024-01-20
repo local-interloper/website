@@ -16,7 +16,7 @@ const PersonalProjects = () => {
       </div>
       <div className="flex flex-col items-center w-full gap-2">
         <Link
-          href="/hobbies/programming"
+          href="/programming"
           className="btn h-32 w-32 btn-circle btn-outline btn-primary"
         >
           <SiGithub className="text-8xl" />

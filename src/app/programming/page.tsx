@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/core/containers/page-wrapper";
 import Title from "@/components/core/text/title";
 import {getGitHubRepos} from "@/util/apis/github";
-import RepoCard from "@/app/hobbies/programming/repo-card";
+import RepoCard from "@/app/programming/repo-card";
 
 const ProgrammingPage = async () => {
   const repos = (await getGitHubRepos())
