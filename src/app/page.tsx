@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/core/containers/page-wrapper";
 import Image from "next/image";
-import ProfilePicture from "@assets/pfp.png";
+import ProfilePicture from "@assets/pfp.png"
 import {SOCIAL} from "@/data/social";
 import Link from "next/link";
 

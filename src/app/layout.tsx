@@ -4,8 +4,6 @@ import {Inter} from 'next/font/google';
 import IChildrenProps from "@/interfaces/children-props";
 import classNames from "@/util/classNames";
 import Menu from "@/components/core/menu";
-import BgImage from "@assets/background.png";
-import Image from "next/image";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -74,7 +72,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({children}: IChildrenProps) => {
   return (
-    <html data-theme="dark" lang="en">
+    <html lang="en">
     <body
       className={classNames(
         "relative w-screen h-[100svh] backdrop-blur-sm text-text bg-base-300",
