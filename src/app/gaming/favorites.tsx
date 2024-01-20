@@ -1,5 +1,5 @@
 import Title from "@/components/core/text/title";
-import FavoriteCard from "@/app/hobbies/games/favorite-card";
+import FavoriteCard from "@/app/gaming/favorite-card";
 import Container from "@/components/core/containers/container";
 import Text from "@/components/core/text/text";
 

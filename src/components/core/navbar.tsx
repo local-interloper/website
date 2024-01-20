@@ -4,15 +4,15 @@ import LinkButton from "@/components/core/link-button";
 
 const OPTIONS = [
   {
-    text: "Home",
+    name: "Home",
     href: "/"
   },
   {
-    text: "Services",
+    name: "Services",
     href: "/"
   },
   {
-    text: "About",
+    name: "About",
     href: "/"
   }
 ];

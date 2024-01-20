@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/core/containers/page-wrapper";
 import Title from "@/components/core/text/title";
-import Gallery from "@/app/hobbies/art/gallery";
+import Gallery from "@/app/art/gallery";
 import Text from "@/components/core/text/text";
 
 
