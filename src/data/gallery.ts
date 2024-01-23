@@ -3,6 +3,7 @@ import Img2 from "@assets/gallery/cl.png"
 import Img3 from "@assets/gallery/akira.png"
 import Img4 from "@assets/gallery/kleiner.png"
 import Img5 from "@assets/gallery/alien.png"
+import Img6 from "@assets/gallery/room.png"
 import {StaticImageData} from "next/image";
 
 export interface ImageData {
@@ -36,5 +37,9 @@ export const GALLERY_DATA: ImageData[] = [
     image: Img5,
     title: "MU-TH-UR 6000",
     inspiration: "Alien"
+  },
+  {
+    image: Img6,
+    title: "My room",
   }
 ]
