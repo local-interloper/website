@@ -24,7 +24,7 @@ const Gallery = () => {
           )}
         >
           <div className="relative w-full h-full">
-            <Image src={imageData.image} alt={imageData.title} fill style={{objectFit: "contain"}} />
+            <Image src={imageData.image} alt={imageData.title} fill style={{objectFit: "contain"}} unoptimized/>
           </div>
           <button className="absolute top-2 right-2" onClick={() => setImageData(undefined)}>
             <HiX className="text-3xl" />
