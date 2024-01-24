@@ -48,10 +48,9 @@ const Menu = () => {
           href={href}
           key={i}
           className={classNames(
-            "flex justify-center items-center text-primary lg:tooltip tooltip-primary",
+            "flex justify-center items-center text-primary",
             (href === "/" ? pathName === href : pathName.startsWith(href)) && "active"
           )}
-          data-tip={name}
         >
           <Icon className="text-xl" />
         </Link>
