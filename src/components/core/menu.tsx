@@ -43,7 +43,7 @@ const Menu = () => {
 
   return (
     <div className="btm-nav">
-      {OPTIONS.map(({Icon, href, name}, i) => (
+      {OPTIONS.map(({Icon, href}, i) => (
         <Link
           href={href}
           key={i}
