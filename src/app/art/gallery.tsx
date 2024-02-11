@@ -24,7 +24,7 @@ const Gallery = () => {
           )}
         >
           <div className="relative w-full h-full">
-            <Image src={imageData.image} alt={imageData.title} fill style={{objectFit: "contain"}} unoptimized/>
+            <Image src={imageData.image} alt={imageData.title} fill style={{objectFit: "contain"}} unoptimized />
           </div>
           <button className="absolute top-2 right-2" onClick={() => setImageData(undefined)}>
             <HiX className="text-3xl" />
@@ -32,10 +32,12 @@ const Gallery = () => {
           <div className="absolute top-2 left-2">
             <p>{imageData.title}</p>
           </div>
-          <div className="absolute bottom-2 left-2 italic opacity-60">
-            <p>Inspired by:</p>
-            <p>{imageData.inspiration}</p>
-          </div>
+          {imageData.inspiration && (
+            <div className="absolute bottom-2 left-2 italic opacity-60">
+              <p>Inspired by:</p>
+              <p>{imageData.inspiration}</p>
+            </div>
+          )}
         </div>
       )}
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5 w-full">
