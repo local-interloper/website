@@ -1,14 +1,12 @@
 "use client";
 
-import {BiCode, BiCodeAlt, BiCodeBlock, BiHome} from "react-icons/bi";
-import {BsPerson} from "react-icons/bs";
-import {usePathname} from "next/navigation";
 import classNames from "@/util/classNames";
 import Link from "next/link";
-import {SiGithub, SiSteam} from "react-icons/si";
-import {SlPicture} from "react-icons/sl";
-import {MdLightbulb} from "react-icons/md";
+import {BiCodeBlock, BiHome} from "react-icons/bi";
+import {BsPerson} from "react-icons/bs";
+import {usePathname} from "next/navigation";
 import {GiJoystick} from "react-icons/gi";
+import {FaPaintBrush} from "react-icons/fa";
 
 const OPTIONS = [
   {
@@ -23,7 +21,7 @@ const OPTIONS = [
   },
   {
     name: "Art",
-    Icon: SlPicture,
+    Icon: FaPaintBrush,
     href: "/art"
   },
   {

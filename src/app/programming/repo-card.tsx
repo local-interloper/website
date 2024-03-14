@@ -24,7 +24,7 @@ const RepoCard = ({repo: {name, language, html_url, description}}: RepoCardProps
 
   return (
     <Link
-      className="relative card bg-base-200 p-2 w-80 h-40 lg:hover:scale-110 transition-all duration-200"
+      className="relative card bg-base-200 p-4 w-80 h-40 lg:hover:scale-110 transition-all duration-200"
       href={html_url}
       target="_blank"
     >
@@ -36,7 +36,7 @@ const RepoCard = ({repo: {name, language, html_url, description}}: RepoCardProps
           <p>¯\_(ツ)_/¯</p>
         )}
       </div>
-      <div className="absolute flex items-center gap-2 bottom-2 right-2">
+      <div className="absolute flex items-center gap-2 bottom-4 right-4">
         <p>Language:</p>
         <LanguageIcon />
       </div>
