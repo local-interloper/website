@@ -2,6 +2,8 @@ import PageWrapper from "@/components/core/containers/page-wrapper";
 import Title from "@/components/core/text/title";
 import {getGitHubRepos} from "@/util/apis/github";
 import RepoCard from "@/app/programming/repo-card";
+import {FaPaintBrush} from "react-icons/fa";
+import {BiCodeBlock} from "react-icons/bi";
 
 const ProgrammingPage = async () => {
   const repos = (await getGitHubRepos())
@@ -10,7 +12,10 @@ const ProgrammingPage = async () => {
 
   return (
     <PageWrapper className="pt-20">
-      <Title bold>Programming</Title>
+      <div className="flex gap-5 items-center">
+        <Title bold size="lg">Programming</Title>
+        <BiCodeBlock className="text-8xl text-primary" />
+      </div>
       <div className="flex items-center justify-center flex-col lg:flex-row gap-2 p-2">
         <p className="text-xl text-center lg:text-right max-w-lg">
           Welcome to my dump of open source projects, prototypes and unmaintained code.
