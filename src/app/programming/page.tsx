@@ -2,7 +2,6 @@ import PageWrapper from "@/components/core/containers/page-wrapper";
 import Title from "@/components/core/text/title";
 import {getGitHubRepos} from "@/util/apis/github";
 import RepoCard from "@/app/programming/repo-card";
-import {FaPaintBrush} from "react-icons/fa";
 import {BiCodeBlock} from "react-icons/bi";
 
 const ProgrammingPage = async () => {
