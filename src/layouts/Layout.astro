@@ -1,0 +1,32 @@
+---
+import "../styles/index.css";
+import Navbar from "../components/core/nav/Navbar.astro";
+import MobileNavbar from "../components/core/nav/MobileNavbar.astro";
+import Footer from "../components/core/Footer.astro";
+
+interface Props {
+  noFooter?: boolean;
+}
+
+const {noFooter} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="no-scroll">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title>local.interloper</title>
+</head>
+<body>
+<main class="flex flex-col w-full bg-base-300 text-xl">
+  <Navbar />
+  <MobileNavbar />
+  <div class="flex flex-col items-center w-full h-full overflow-y-scroll no-scroll">
+    <slot />
+  </div>
+  {!noFooter && <Footer/>}
+</main>
+</body>
+</html>

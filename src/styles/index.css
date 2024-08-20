@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "mom";
+        font-style: normal;
+        font-weight: 500;
+        src: url("/fonts/mom.ttf") format("truetype");
+    }
+}
+
+.font-title {
+    @apply font-mom text-2xl sm:text-4xl;
+}
+
+.font-main-title {
+    @apply font-mom text-4xl sm:text-8xl;
+}
+
+.font-sub-title {
+    @apply font-mom text-xl sm:text-2xl;
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

@@ -1,0 +1,29 @@
+---
+import tech from "./tech";
+import TooltipIcon from "@/components/core/TooltipIcon.astro";
+---
+<div class="flex flex-col items-center max-w-4xl gap-5">
+  <div class="flex flex-col items-center w-full gap-2 text-center">
+    <span class="font-title">Technologies</span>
+    <p>
+      As someone who was naturally curious about tech, it's no surprise that I have acquired a very wide skill set.
+      A mountain of personal projects taught me a thing or two. Hell, way more than two. I became very competent at
+      getting things done. Here's some technology I had pleasure (or displeasure) using so far. It is by no means an
+      exhaustive list, but the one I can make out from the top of my head.
+    </p>
+  </div>
+  <div class="flex flex-col items-center w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {tech.map(({name, entries}) => (
+        <div class="flex flex-col items-center w-full bg-base-200 p-5 gap-5">
+          <span class="text-center font-sub-title">{name}</span>
+          <div class="grid grid-cols-3 gap-2">
+            {entries.map(({name, icon}) => (
+              <TooltipIcon icon={icon} tooltip={name} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

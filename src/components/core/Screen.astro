@@ -1,0 +1,16 @@
+---
+interface Props {
+  svh?: number;
+}
+
+const {svh = 50} = Astro.props;
+---
+
+<section
+  class:list={[
+    "flex flex-col items-center justify-center w-full",
+    `min-h-[${svh}svh]`
+  ]}
+>
+  <slot />
+</section>

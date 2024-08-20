@@ -1,0 +1,18 @@
+---
+interface Props {
+  reverse?: boolean;
+  center?: boolean;
+}
+
+const {reverse = false, center = true} = Astro.props;
+---
+
+<section
+  class:list={[
+    "flex flex-col max-w-4xl gap-10",
+    reverse ? "md:flex-row-reverse" : "md:flex-row",
+    center && "items-center"
+  ]}
+>
+  <slot />
+</section>

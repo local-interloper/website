@@ -1,0 +1,26 @@
+---
+import SideBySide from "@/components/core/SideBySide.astro";
+import {Image} from 'astro:assets';
+import Avatar from "@assets/avatar.png";
+import Screen from "../../../components/core/Screen.astro";
+import getAge from "../../../helpers/get-age";
+
+const age = getAge(new Date("08/04/2000"));
+---
+<SideBySide>
+  <article class="flex flex-col items-center gap-2 w-full">
+    <Image class="w-40 h-40 rounded-full" src={Avatar} alt="avatar image" />
+    <article class="flex flex-col items-center">
+      <p>Name: Marino</p>
+      <p>Age: {age}</p>
+    </article>
+  </article>
+  <article class="flex flex-col items-center gap-2 w-full">
+    <h1 class="font-title">About me</h1>
+    <p>
+      Hi, I am Marino! A {age} year old tech nerd Croatia that touched the computer for the first time at the ripe
+      age of 6 and started learning basic at the age of 10. I am a massive nerd about anything computer related but
+      have other interests as well. I do some art from time to time and enjoy a kidney worth of games on Steam.
+    </p>
+  </article>
+</SideBySide>

@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  subtitle?: String;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="relative flex justify-center items-center w-full h-[100svh] select-none">
+  <div class="flex flex-col items-center gap-5">
+    <span class="font-main-title">{title}</span>
+    <span>{subtitle}</span>
+  </div>
+  <div class="absolute flex flex-col items-center gap-2 bottom-20 md:bottom-5">
+    <span>Scroll to continue</span>
+    <Icon class="text-2xl animate-bounce" name="fluent:chevron-down-24-regular" />
+  </div>
+</div>

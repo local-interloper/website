@@ -1,0 +1,20 @@
+---
+import {Image} from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Avatar from "../assets/avatar.png";
+import Social from "../components/core/social/Social.astro";
+---
+
+<Layout noFooter>
+  <div class="flex flex-col items-center justify-center w-full h-[100svh]">
+    <div class="flex flex-col items-center gap-5">
+      <Image
+        class="w-64 h-64 rounded-full"
+        src={Avatar}
+        alt="local.interloper's avatar"
+      />
+      <span class="font-title">local.interloper</span>
+      <Social />
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  summary: string;
+  date: Date;
+  slug: string;
+}
+
+const { title, summary, date, slug } = Astro.props;
+---
+
+<a href={`blog/${slug}`} class="card bg-base-100 shadow p-5 w-full">
+  <div class="card-title">
+    <span>{title}</span>
+  </div>
+  <div class="card-body">
+    <span>{summary}</span>
+  </div>
+  <div class="flex justify-end opacity-50">
+    <span>{date.toLocaleDateString(navigator.language)}</span>
+  </div>
+</a>

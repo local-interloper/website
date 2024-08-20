@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TitleScreen from "../../components/core/TitleScreen.astro";
+import Info from "./components/Info.astro";
+import Tech from "./components/tech/Tech.astro";
+---
+
+<Layout>
+  <TitleScreen title="About me" />
+
+  <div class="flex flex-col items-center gap-52 p-5">
+    <Info />
+    <Tech />
+  </div>
+</Layout>

@@ -1,0 +1,13 @@
+---
+import {Icon} from "astro-icon/components";
+interface Props {
+  tooltip: string;
+  icon: string;
+}
+
+const {tooltip, icon} = Astro.props;
+---
+
+<div class="flex items-center justify-center tooltip p-2 bg-base-100 rounded w-20 h-20" data-tip={tooltip}>
+  <Icon class="w-20 h-20" name={icon} />
+</div>

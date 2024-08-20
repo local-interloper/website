@@ -1,0 +1,24 @@
+---
+import {Icon} from "astro-icon/components";
+
+interface Props {
+  title: string;
+  date: Date;
+}
+
+const {title, date} = Astro.props;
+---
+
+<div class="relative flex justify-center items-center w-full h-[100svh]">
+  <div class="flex flex-col items-center gap-5">
+    <span class="text-center font-main-title">{title}</span>
+    <span class="opacity-50">{date.toLocaleDateString(navigator.language)}</span>
+  </div>
+  <div class="absolute flex flex-col items-center gap-2 bottom-5">
+    <span>Scroll to continue</span>
+    <Icon
+      class="text-2xl animate-bounce"
+      name="fluent:chevron-down-24-regular"
+    />
+  </div>
+</div>
