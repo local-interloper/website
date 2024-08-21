@@ -1,0 +1,10 @@
+export const SITE_NAME = "local.interloper.me";
+export const TITLE = "local.interloper.me";
+export const DESCRIPTION = "local.interloper's personal website and linktree.";
+export const IMAGE = "/avatar.png";
+export const FAVICON = "/favicon.ico";
+export const AUTHOR = "local.interloper";
+export const COPYRIGHT = AUTHOR;
+export const TYPE = "website";
+export const ASTRO_SITEMAP = true;
+export const ASTRO_GENERATOR = true;

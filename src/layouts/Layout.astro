@@ -3,6 +3,19 @@ import "../styles/index.css";
 import Navbar from "../components/core/nav/Navbar.astro";
 import MobileNavbar from "../components/core/nav/MobileNavbar.astro";
 import Footer from "../components/core/Footer.astro";
+import {SEOMetadata} from "astro-seo-metadata";
+import {
+  ASTRO_GENERATOR,
+  ASTRO_SITEMAP,
+  AUTHOR,
+  COPYRIGHT,
+  DESCRIPTION,
+  FAVICON,
+  IMAGE,
+  SITE_NAME,
+  TITLE,
+  TYPE
+} from "../data/consts";
 
 interface Props {
   noFooter?: boolean;
@@ -16,8 +29,20 @@ const {noFooter} = Astro.props;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <title>local.interloper</title>
+  <SEOMetadata
+    siteName={SITE_NAME}
+    title={TITLE}
+    description={DESCRIPTION}
+    type={TYPE}
+    canonicalUrl={Astro.url.toString()}
+    image={IMAGE}
+    favicon={FAVICON}
+    author={AUTHOR}
+    copyright={COPYRIGHT}
+    astroSitemap={ASTRO_SITEMAP}
+    astroGenerator={ASTRO_GENERATOR}
+  />
 </head>
 <body>
 <main class="flex flex-col w-full bg-base-300 text-xl">
@@ -26,7 +51,8 @@ const {noFooter} = Astro.props;
   <div class="flex flex-col items-center w-full h-full overflow-y-scroll no-scroll">
     <slot />
   </div>
-  {!noFooter && <Footer/>}
+  {!noFooter &&
+    <Footer />}
 </main>
 </body>
 </html>
