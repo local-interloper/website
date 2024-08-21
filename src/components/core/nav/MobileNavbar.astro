@@ -6,8 +6,8 @@ const entries = navEntries;
 ---
 
 <div class="md:hidden z-40 btm-nav drop-shadow-2xl">
-  {entries.map(({icon, url}) => (
-    <a href={url}>
+  {entries.map(({name, icon, url}) => (
+    <a href={url} aria-label={name}>
       <Icon name={icon} />
     </a>
   ))}

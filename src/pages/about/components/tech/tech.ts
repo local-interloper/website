@@ -1,25 +1,5 @@
 const tech = [
   {
-    name: "Game Dev",
-    entries: [
-      {name: "Godot", icon: "simple-icons:godotengine"},
-      {name: "Unity", icon: "simple-icons:unity"},
-      {name: "MonoGame", icon: "simple-icons:monogame"},
-      {name: "raylib", icon: "simple-icons:raylib"},
-      {name: "Unreal Engine", icon: "simple-icons:unrealengine"},
-    ]
-  },
-  {
-    name: "Art",
-    entries: [
-      {name: "Blender", icon: "simple-icons:blender"},
-      {name: "Krita", icon: "simple-icons:krita"},
-      {name: "Aseprite", icon: "simple-icons:aseprite"},
-      {name: "Adobe Premiere Pro", icon: "simple-icons:adobepremierepro"},
-      {name: "Audacity", icon: "simple-icons:audacity"},
-    ]
-  },
-  {
     name: "Programming Languages",
     entries: [
       {name: "Rust", icon: "simple-icons:rust"},
@@ -46,9 +26,30 @@ const tech = [
       {name: "Express", icon: "simple-icons:express"},
       {name: "Tailwind CSS", icon: "simple-icons:tailwindcss"},
       {name: "daisyUI", icon: "simple-icons:daisyui"},
+      {name: "Headless UI", icon: "simple-icons:headlessui"},
       {name: "FastAPI", icon: "simple-icons:fastapi"},
       {name: "NestJS", icon: "simple-icons:nestjs"},
       {name: "Stripe", icon: "simple-icons:stripe"},
+    ]
+  },
+  {
+    name: "Game Dev",
+    entries: [
+      {name: "Godot", icon: "simple-icons:godotengine"},
+      {name: "Unity", icon: "simple-icons:unity"},
+      {name: "MonoGame", icon: "simple-icons:monogame"},
+      {name: "raylib", icon: "simple-icons:raylib"},
+      {name: "Unreal Engine", icon: "simple-icons:unrealengine"},
+    ]
+  },
+  {
+    name: "Art",
+    entries: [
+      {name: "Blender", icon: "simple-icons:blender"},
+      {name: "Krita", icon: "simple-icons:krita"},
+      {name: "Aseprite", icon: "simple-icons:aseprite"},
+      {name: "Adobe Premiere Pro", icon: "simple-icons:adobepremierepro"},
+      {name: "Audacity", icon: "simple-icons:audacity"},
     ]
   },
   {
@@ -59,6 +60,20 @@ const tech = [
       {name: "Portainer", icon: "simple-icons:portainer"},
       {name: "Nginx", icon: "simple-icons:nginx"},
       {name: "Vercel", icon: "simple-icons:vercel"},
+      {name: "Netlify", icon: "simple-icons:netlify"},
+    ]
+  },
+  {
+    name: "Tools",
+    entries: [
+      {name: "JetBrains IDEs", icon: "simple-icons:jetbrains"},
+      {name: "Visual Studio Code", icon: "simple-icons:visualstudiocode"},
+      {name: "Studio Code", icon: "simple-icons:visualstudio"},
+      {name: "Obsidian", icon: "simple-icons:obsidian"},
+      {name: "Excalidarw", icon: "simple-icons:excalidraw"},
+      {name: "Syncthing", icon: "simple-icons:syncthing"},
+      {name: "Bash", icon: "simple-icons:gnubash"},
+      {name: "Git", icon: "simple-icons:git"},
     ]
   },
   {
@@ -69,6 +84,7 @@ const tech = [
       {name: "Electron", icon: "simple-icons:electron"},
       {name: "Arduino", icon: "simple-icons:arduino"},
       {name: "MQTT", icon: "simple-icons:mqtt"},
+      {name: ".NET", icon: "simple-icons:dotnet"},
     ]
   }
 ];
