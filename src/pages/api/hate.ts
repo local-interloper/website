@@ -4,7 +4,7 @@ const HATE = "HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({request, url}) => {
+export const GET: APIRoute = async ({url}) => {
   let hate = `${HATE}`;
 
   if (url.searchParams.get("uppercase") === "false") {
