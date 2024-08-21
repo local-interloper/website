@@ -17,6 +17,6 @@ const { title, summary, date, slug } = Astro.props;
     <span>{summary}</span>
   </div>
   <div class="flex justify-end opacity-50">
-    <span>{date.toLocaleDateString(navigator.language)}</span>
+    <span>{date.toLocaleDateString("en-US")}</span>
   </div>
 </a>
