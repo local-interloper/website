@@ -23,6 +23,10 @@
     @apply font-mom text-xl sm:text-2xl;
 }
 
+.hover-rise {
+    @apply scale-100 hover:scale-110 transition-all duration-200;
+}
+
 .no-scroll::-webkit-scrollbar {
     display: none;
 }

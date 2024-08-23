@@ -1,0 +1,41 @@
+---
+import SideBySide from "../../../../components/core/SideBySide.astro";
+import projects from "./projects";
+import getRepo from "../../../../helpers/get-repo";
+import {socialsDataRecord} from "../../../../components/core/social/social";
+import {Icon} from "astro-icon/components";
+import toDisplayDate from "../../../../helpers/to-display-date";
+
+const repos = await Promise.all(projects.map((repoName) => getRepo(repoName)));
+const {icon, url} = socialsDataRecord["github"];
+---
+
+<SideBySide>
+  <article class="flex flex-col items-center gap-5 w-full">
+    <h1 class="font-title">Noteworthy Projects</h1>
+    <p>
+      During my career I also pull off some noteworthy projects that I consider are a display of my programming skills.
+      Most of my for commercial achievements are under under NDA-s so this will be a none exhaustive list of fun
+      projects I did.
+    </p>
+    <a class="btn btn-primary btn-outline flex gap-2 items-center" href={url} target="_blank">
+      <Icon name={icon} />
+      <span>More on my GitHub</span>
+    </a>
+  </article>
+
+  <article class="flex flex-col items-center gap-2 w-full">
+    <div class="flex flex-col items-center gap-2 w-full">
+      {repos.map(({name, svn_url, updated_at}) => (
+        <a
+          class="flex justify-between w-full p-3 bg-base-200 rounded shadow hover-rise"
+          href={svn_url}
+          target="_blank"
+        >
+          <span>{name}</span>
+          <span class="opacity-50">Last updated: {toDisplayDate(updated_at)}</span>
+        </a>
+      ))}
+    </div>
+  </article>
+</SideBySide>

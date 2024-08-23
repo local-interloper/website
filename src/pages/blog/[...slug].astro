@@ -29,7 +29,7 @@ const { Content } = await post.render();
     <BlogTitle title={post.data.title} date={post.data.date} />
   </div>
   <div class="flex flex-col items-center w-full pb-20">
-    <div class="flex flex-col items-center max-w-4xl gap-5 p-5">
+    <div class="flex flex-col max-w-4xl gap-5 p-5">
       <Content components={mdxComponents} />
     </div>
   </div>
