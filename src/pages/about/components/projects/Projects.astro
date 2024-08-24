@@ -28,7 +28,7 @@ const {icon, url} = socialsDataRecord["github"];
     <div class="flex flex-col items-center gap-2 w-full">
       {repos.map(({name, svn_url, created_at}) => (
         <a
-          class="flex justify-between w-full p-3 bg-base-200 rounded shadow hover-rise"
+          class="flex justify-between flex-col md:flex-row w-full p-3 bg-base-200 rounded shadow hover-rise"
           href={svn_url}
           target="_blank"
         >

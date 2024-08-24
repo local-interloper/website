@@ -3,13 +3,13 @@ import Social from "./social/Social.astro";
 import {Image} from "astro:assets";
 import Logo from "@assets/logo.png";
 ---
-<footer class="flex justify-between items-center bg-base-200 mt-20 p-5">
+<footer class="flex justify-between items-center bg-base-200 mt-20 p-5 pb-20 md:pb-5">
   <section class="flex items-center justify-between w-full">
     <article class="flex gap-5 items-center">
       <Image src={Logo} alt="local.interloper logo" class="h-10 w-10 rounded shadow" />
       <span>© 2024 local.interloper</span>
     </article>
-    <article>
+    <article class="hidden md:block">
       <Social side="top" />
     </article>
   </section>
