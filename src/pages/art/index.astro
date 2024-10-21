@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TitleScreen from "../../components/core/TitleScreen.astro";
+import Gallery from "./Gallery";
+import type {ImageMetadata} from "astro";
+
+const srcs = (await Astro.glob<{ default: ImageMetadata }>("/public/img/art/*.png")).map(({default: {src}}) => src);
+---
+
+<Layout>
+  <TitleScreen title="Art" subtitle="If you can call it that" />
+
+  <div class="flex flex-col items-center gap-52 p-5">
+    <Gallery srcs={srcs} client:load />
+  </div>
+</Layout>

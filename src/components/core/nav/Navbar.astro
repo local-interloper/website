@@ -1,6 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
-import { navEntries } from "./nav-entries";
+import {Icon} from "astro-icon/components";
+import {navEntries} from "./nav-entries";
 ---
 
 <nav class="hidden md:flex fixed top-0 left-0 z-40 justify-between w-full bg-base-100 shadow p-2">
@@ -9,7 +9,7 @@ import { navEntries } from "./nav-entries";
   </div>
   <div class="flex gap-2 items-center">
     {
-      navEntries.map(({ name, url, icon }) => (
+      navEntries.map(({name, url, icon}) => (
         <a class="btn btn-primary btn-outline text-xl w-32" href={url}>
           <div class="flex w-full items-center gap-2">
             <Icon class="text-2xl" name={icon} />
