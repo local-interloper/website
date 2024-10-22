@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Background from "@assets/backgrounds/about.png"
 import TitleScreen from "../../components/core/TitleScreen.astro";
 import Info from "./components/Info.astro";
 import Tech from "./components/tech/Tech.astro";
@@ -7,9 +8,9 @@ import Projects from "./components/projects/Projects.astro";
 ---
 
 <Layout>
-  <TitleScreen title="About me" />
+  <TitleScreen title="About me" subtitle="The bugger behind this site" background={Background} />
 
-  <div class="flex flex-col items-center gap-52 p-5">
+  <div class="flex flex-col items-center gap-52 px-5 py-40">
     <Info />
     <Tech />
     <Projects />
