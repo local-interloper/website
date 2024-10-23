@@ -22,11 +22,10 @@ const {title, subtitle, background} = Astro.props;
   {background && (
     <Image
       src={background}
-      alt=""
+      alt="Site banner"
       class="absolute top-0 left-0 h-full object-center object-cover"
       loading="eager"
       decoding="async"
-      format="avif"
       quality="mid"
     />
   )}
