@@ -24,8 +24,10 @@ const {title, subtitle, background} = Astro.props;
       src={background}
       alt=""
       class="absolute top-0 left-0 h-full object-center object-cover"
-      loading="eager"
-      decoding="sync"
+      loading="lazy"
+      decoding="async"
+      format="avif"
+      quality="mid"
     />
   )}
 
