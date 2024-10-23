@@ -43,6 +43,7 @@ const {noFooter} = Astro.props;
     astroSitemap={ASTRO_SITEMAP}
     astroGenerator={ASTRO_GENERATOR}
   />
+  <slot name="head"/>
 </head>
 <body>
 <main class="flex flex-col w-full bg-base-300 text-xl">
