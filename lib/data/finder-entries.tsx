@@ -20,7 +20,7 @@ const finderEntries: FinderEntryData[] = [
     name: "Programming",
     Icon: FaCode,
     description: "Dump of pet projects and unmaintained code",
-    url: "/hobbies/business/"
+    url: "/hobbies/programming/"
   },
   {
     name: "Games",

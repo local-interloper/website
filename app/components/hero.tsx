@@ -4,7 +4,7 @@ interface Props extends PropsChildren {
 }
 
 const Hero = ({children}: Props) => (
-  <article className="flex flex-col items-center justify-center w-screen h-[100svh]">
+  <article className="flex flex-col items-center justify-center w-full h-[100svh]">
     {children}
   </article>
 );

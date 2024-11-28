@@ -36,7 +36,7 @@ export const Layout = ({children}: { children: React.ReactNode }) => (
     <Meta />
     <Links />
   </head>
-  <body className="flex w-screen h-[100svh] overflow-y-scroll">
+  <body>
   <Finder />
   {children}
   <ScrollRestoration />

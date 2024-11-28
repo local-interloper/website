@@ -3,6 +3,9 @@ import finderEntries from "@/lib/data/finder-entries";
 import FinderEntry from "@/app/components/finder-entry";
 import clamp from "@/lib/util/clamp";
 import {useNavigate} from "react-router";
+import {FaMagnifyingGlass} from "react-icons/fa6";
+import {FaBars} from "react-icons/fa";
+import cn from "@/lib/util/cn";
 
 const Finder = () => {
   const [finderOpen, setFinderOpen] = useState(false);
@@ -13,12 +16,19 @@ const Finder = () => {
 
   useEffect(() => {
     const keyPressHandler = (e: KeyboardEvent) => {
-      if (e.key === "f" && e.ctrlKey) {
+      if (e.key === "k" && e.ctrlKey) {
         e.preventDefault();
         setFinderOpen(true);
         setSelectedIndex(0);
         setFilteredFinderEntries(finderEntries);
       }
+
+      document.getElementById("search")?.focus();
+
+      const scrollSelectedIntoView = () => {
+        const selected = document.getElementById("results")!.children[selectedIndex] as HTMLElement;
+        selected.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+      };
 
       if (finderOpen) {
         if (e.key === "Escape") {
@@ -27,10 +37,12 @@ const Finder = () => {
 
         if (e.key === "ArrowDown") {
           setSelectedIndex(clamp(selectedIndex + 1, 0, filteredFinderEntries.length - 1));
+          scrollSelectedIntoView();
         }
 
         if (e.key === "ArrowUp") {
           setSelectedIndex(clamp(selectedIndex - 1, 0, filteredFinderEntries.length - 1));
+          scrollSelectedIntoView();
         }
 
         if (e.key == "Enter") {
@@ -44,7 +56,6 @@ const Finder = () => {
 
 
     document.addEventListener("keydown", keyPressHandler);
-    document.getElementById("search")?.focus();
 
     return () => {
       document.removeEventListener("keydown", keyPressHandler);
@@ -59,31 +70,58 @@ const Finder = () => {
       return;
     }
 
+    setSelectedIndex(0);
+
     setFilteredFinderEntries(finderEntries.filter(entry => (
       entry.name.toLowerCase().includes(search) ||
       entry.description.toLowerCase().includes(search)
     )));
   };
 
-  return finderOpen && (
-    <article
-      className="fixed flex top-0 left-0 items-center justify-center w-screen h-[100svh] bg-black bg-opacity-50 z-20"
-    >
-      <section className="flex flex-col gap-section bg-base-200 rounded-xl h-1/2 w-1/2 p-5 shadow">
-        <input
-          id="search"
-          className="input"
-          placeholder="What do you want?"
-          type="text"
-          onChange={(e) => onSearch(e)}
-        />
-        <section className="h-full flex flex-col gap-item overflow-y-scroll">
-          {filteredFinderEntries.map((data, i) => (
-            <FinderEntry key={i} data={data} selected={selectedIndex === i} />
-          ))}
-        </section>
-      </section>
-    </article>
+  return (
+    <>
+      <header className="fixed top-2 left-2 w-full">
+        <span className="hidden md:block">
+          Press <kbd className="kbd">Ctrl</kbd> + <kbd className="kbd">K</kbd> to navigate
+        </span>
+        <button
+          className="flex md:hidden btn btn-square items-center justify-center" onClick={() => setFinderOpen(true)}
+        >
+          <FaBars className="text-2xl" />
+        </button>
+      </header>
+      {finderOpen && (
+        <article
+          className={cn(
+            "fixed flex top-0 left-0 items-center justify-center w-full h-full",
+            "bg-black bg-opacity-50 z-20 p-2"
+          )}
+        >
+          <section
+            className="flex flex-col gap-section bg-base-200 rounded-xl h-full w-full md:h-1/2 md:w-1/2 p-5 shadow z-40"
+          >
+            <label className="input flex items-center justify-between">
+              <input
+                id="search"
+                placeholder="What do you want?"
+                type="text"
+                autoComplete="off"
+                onChange={(e) => onSearch(e)}
+              />
+              <FaMagnifyingGlass />
+            </label>
+            <section id="results" className="h-full flex flex-col gap-item overflow-y-scroll">
+              {filteredFinderEntries.map((data, i) => (
+                <FinderEntry key={i} data={data} selected={selectedIndex === i} />
+              ))}
+            </section>
+            <section className="flex md:hidden btn btn-outline justify-center items-center w-full">
+              <button onClick={() => setFinderOpen(false)}>Close</button>
+            </section>
+          </section>
+        </article>
+      )}
+    </>
   );
 };
 

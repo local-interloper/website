@@ -6,17 +6,21 @@ interface Props {
   selected: boolean;
 }
 
-const FinderEntry = ({data: {name, Icon, description, url}, selected}: Props) => (
-  <a href={url} className={cn(
-    "flex p-2 items-center gap-2 hover:bg-base-300 rounded-lg",
-    selected && "bg-base-300"
-  )}>
-    <Icon className="text-2xl" />
-    <section className="flex flex-col">
-      <h1 className="text-lg font-semibold">{name}</h1>
-      <p className="opacity-80">{description}</p>
-    </section>
-  </a>
-);
+const FinderEntry = ({data: {name, Icon, description, url}, selected}: Props) => {
+  return (
+    <a
+      href={url} className={cn(
+      "flex p-2 items-center gap-4 hover:bg-base-300 rounded-lg",
+      selected && "bg-base-300"
+    )}
+    >
+      <Icon className="text-2xl" />
+      <section className="flex flex-col">
+        <h1 className="text-lg font-semibold">{name}</h1>
+        <p className="opacity-80">{description}</p>
+      </section>
+    </a>
+  );
+};
 
 export default FinderEntry;

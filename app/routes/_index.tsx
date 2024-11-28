@@ -1,14 +1,5 @@
-import {LinksFunction} from "@remix-run/node";
 import Hero from "@/app/components/hero";
 import Social from "@/app/components/social";
-import Logo from "@assets/logo.png";
-
-export const links: LinksFunction = () => [
-  {
-    rel: "preload",
-    href: Logo
-  }
-];
 
 const _index = () => (
   <Hero>
@@ -17,8 +8,10 @@ const _index = () => (
         <h1 className="font-title">local.interloper</h1>
       </article>
       <Social />
-      <span>Press <kbd className="kbd">Ctrl</kbd> + <kbd className="kbd">F</kbd> to get started</span>
     </section>
+    <footer className="fixed bottom-2">
+      <span className="opacity-80">Copyright (C) 2024 local.interloper</span>
+    </footer>
   </Hero>
 );
 

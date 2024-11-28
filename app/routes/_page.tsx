@@ -1,18 +1,11 @@
-import PropsChildren from "@/lib/types/props-children";
 import {Outlet} from "@remix-run/react";
-
-interface Props extends PropsChildren {
-}
+import Footer from "@/app/components/footer";
 
 const PageLayout = () => (
-  <Outlet />
-)
-
-export const layout = ({children}: Props) => (
-  <div>
-    <h1 className="bg-red-200">Penis</h1>
-    {children}
-  </div>
+  <main className="flex flex-col w-full items-center text-content">
+    <Outlet />
+    <Footer />
+  </main>
 );
 
 export default PageLayout;

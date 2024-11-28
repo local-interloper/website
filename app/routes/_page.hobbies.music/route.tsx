@@ -1,14 +1,8 @@
-import Hero from "@/app/components/hero";
+import UnderConstruction from "@/app/components/under-construction";
 
 const Games = () => {
   return (
-    <article>
-      <Hero>
-        <article>
-          <h1 className="font-title">Games</h1>
-        </article>
-      </Hero>
-    </article>
+    <UnderConstruction />
   );
 };
 
