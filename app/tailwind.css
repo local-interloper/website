@@ -4,9 +4,32 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
+    }
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+    margin: 0;
+    padding: 0;
+}
+
+@layer base {
+    .font-title {
+        @apply text-4xl font-mom;
+    }
+
+    .gap-item {
+        @apply gap-2;
+    }
+
+    .gap-section {
+        @apply gap-5;
+    }
+
+    @font-face {
+        font-family: 'mom';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/mom.ttf) format('truetype');
+    }
 }

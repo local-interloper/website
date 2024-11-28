@@ -5,12 +5,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type {LinksFunction, MetaFunction} from "@remix-run/node";
 
 import "./tailwind.css";
+import Finder from "@/app/components/finder";
 
 export const links: LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {rel: "preconnect", href: "https://fonts.googleapis.com"},
   {
     rel: "preconnect",
     href: "https://fonts.gstatic.com",
@@ -22,24 +23,30 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-}
+export const meta: MetaFunction = () => [
+  {title: "local.interloper"},
+  {name: "description", content: "The official website of local.interloper"},
+];
 
-export default function App() {
+export const Layout = ({children}: { children: React.ReactNode }) => (
+  <html lang="en" data-theme="retro">
+  <head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Meta />
+    <Links />
+  </head>
+  <body className="flex w-screen h-[100svh] overflow-y-scroll">
+  <Finder />
+  {children}
+  <ScrollRestoration />
+  <Scripts />
+  </body>
+  </html>
+);
+
+const App = () => {
   return <Outlet />;
-}
+};
+
+export default App;
