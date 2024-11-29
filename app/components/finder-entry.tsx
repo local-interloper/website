@@ -1,5 +1,6 @@
 import FinderEntryData from "@/lib/types/finder-entry-data";
 import cn from "@/lib/util/cn";
+import {Link} from "react-router-dom";
 
 interface Props {
   data: FinderEntryData;
@@ -9,7 +10,8 @@ interface Props {
 const FinderEntry = ({data: {name, Icon, description, url}, selected}: Props) => {
   return (
     <a
-      href={url} className={cn(
+      href={url}
+      className={cn(
       "flex p-2 items-center gap-4 hover:bg-base-300 rounded-lg",
       selected && "bg-base-300"
     )}

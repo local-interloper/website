@@ -90,37 +90,36 @@ const Finder = () => {
           <FaBars className="text-2xl" />
         </button>
       </header>
-      {finderOpen && (
-        <article
-          className={cn(
-            "fixed flex top-0 left-0 items-center justify-center w-full h-full",
-            "bg-black bg-opacity-50 z-20 p-2"
-          )}
+      <article
+        className={cn(
+          "fixed top-0 left-0 items-center justify-center w-full h-full",
+          "bg-black bg-opacity-50 z-20 p-2",
+          finderOpen ? "flex" : "hidden pointer-events-none"
+        )}
+      >
+        <section
+          className="flex flex-col gap-section bg-base-200 rounded-xl h-full w-full md:h-1/2 md:w-1/2 p-5 shadow z-40"
         >
-          <section
-            className="flex flex-col gap-section bg-base-200 rounded-xl h-full w-full md:h-1/2 md:w-1/2 p-5 shadow z-40"
-          >
-            <label className="input flex items-center justify-between">
-              <input
-                id="search"
-                placeholder="What do you want?"
-                type="text"
-                autoComplete="off"
-                onChange={(e) => onSearch(e)}
-              />
-              <FaMagnifyingGlass />
-            </label>
-            <section id="results" className="h-full flex flex-col gap-item overflow-y-scroll">
-              {filteredFinderEntries.map((data, i) => (
-                <FinderEntry key={i} data={data} selected={selectedIndex === i} />
-              ))}
-            </section>
-            <section className="flex md:hidden btn btn-outline justify-center items-center w-full">
-              <button onClick={() => setFinderOpen(false)}>Close</button>
-            </section>
+          <label className="input flex items-center justify-between">
+            <input
+              id="search"
+              placeholder="What do you want?"
+              type="text"
+              autoComplete="off"
+              onChange={(e) => onSearch(e)}
+            />
+            <FaMagnifyingGlass />
+          </label>
+          <section id="results" className="h-full flex flex-col gap-item overflow-y-scroll">
+            {filteredFinderEntries.map((data, i) => (
+              <FinderEntry key={i} data={data} selected={selectedIndex === i} />
+            ))}
           </section>
-        </article>
-      )}
+          <section className="flex md:hidden btn btn-outline justify-center items-center w-full">
+            <button onClick={() => setFinderOpen(false)}>Close</button>
+          </section>
+        </section>
+      </article>
     </>
   );
 };
