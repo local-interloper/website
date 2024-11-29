@@ -17,7 +17,12 @@ const GameEntry = ({game: {title, subtitle, description, appId}}: Props) => {
         <section className="flex flex-col md:flex-row md:justify-between md:items-center gap-item">
           <section className="flex items-center gap-item">
             <h2 className="font-title">{title}</h2>
-            <a href={`https://store.steampowered.com/app/${appId}/`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`https://store.steampowered.com/app/${appId}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${title} Steam store page`}
+            >
               <FiExternalLink className="text-xl" />
             </a>
           </section>

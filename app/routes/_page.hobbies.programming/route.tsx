@@ -12,7 +12,13 @@ const Games = () => {
           that&apos;s how old I was when I found that book in the attic. It was called something along the lines
           of <i>Basic For Beginners</i> I think. And then I found this program on my old Windows 95 machine (assuming
           you use Windows 11, that&apos;s {95 - 11} installments ahead of you) called&nbsp;
-          <a className="link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/QBasic">
+          <a
+            className="link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://en.wikipedia.org/wiki/QBasic"
+            aria-label="QBasic wikipedia link"
+          >
             QBASIC
           </a>
           .

@@ -10,7 +10,7 @@ const Games = () => {
       url: "https://local.interloper.me",
     },
     ...socials
-  ]
+  ];
 
   return (
     <article>
@@ -21,7 +21,14 @@ const Games = () => {
           </section>
           <section className="flex flex-col gap-item w-full">
             {entries.map(({name, url, Icon}, i) => (
-              <a href={url} className="btn" target="_blank" rel="noopener noreferrer" key={i}>
+              <a
+                href={url}
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                key={i}
+                aria-label={name}
+              >
                 <section className="flex items-center gap-2 w-full">
                   <Icon className="text-2xl" />
                   <span className="text-1xl">{name}</span>
@@ -32,7 +39,7 @@ const Games = () => {
         </article>
       </Hero>
     </article>
-);
+  );
 };
 
 export default Games;
