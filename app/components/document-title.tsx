@@ -4,7 +4,7 @@ interface Props {
 }
 
 const DocumentTitle = ({title, subtitle}: Props) => (
-  <section className="flex justify-between items-end gap-item border-b-2 border-black w-full max-w-2xl pb-2">
+  <section className="flex flex-col md:flex-row justify-between md:items-end gap-item border-b-2 border-black w-full max-w-sm md:max-w-2xl pb-2">
     <h1 className="font-title">{title}</h1>
     {subtitle && <p className="opacity-50 font-serif">{subtitle}</p>}
   </section>

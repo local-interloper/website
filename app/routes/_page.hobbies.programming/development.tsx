@@ -6,7 +6,7 @@ import {SiAudacity, SiBlender, SiKrita, SiUnity, SiVisualstudio} from "react-ico
 const Development = () => (
   <article className="flex flex-col items-center w-full py-10 bg-base-200 shadow">
     <SideBySide>
-      <section className="flex flex-col gap-item w-full max-w-2xl">
+      <section className="flex flex-col gap-item w-full max-w-sm md:max-w-2xl">
         <DocumentTitle title="Development" subtitle="We will NOT talk about C*****T" />
         <p>
           During my teens I played a lot of video games on my PC, PlayStation and Nintendo Wii. Naturally, at some
@@ -23,7 +23,7 @@ const Development = () => (
         </p>
       </section>
       <section className="flex flex-col items-center justify-center">
-        <section className="grid grid-cols-2 gap-5">
+        <section className="grid grid-cols-3 md:grid-cols-2 gap-5">
           {[
             SiVisualstudio,
             SiBlender,

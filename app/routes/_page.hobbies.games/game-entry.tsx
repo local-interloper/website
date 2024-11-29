@@ -10,10 +10,10 @@ const GameEntry = ({game: {title, subtitle, description, appId}}: Props) => {
 
   return (
     <article
-      className="flex justify-between gap-section w-full max-w-6xl bg-base-200 shadow rounded-lg overflow-clip p-2"
+      className="flex flex-col md:flex-row md:justify-between gap-section w-full max-w-sm md:max-w-6xl bg-base-200 shadow rounded-lg overflow-clip p-2"
     >
       <section className="flex flex-col gap-item p-2">
-        <section className="flex gap-item justify-between items-center">
+        <section className="flex flex-col md:flex-row md:justify-between md:items-center gap-item">
           <section className="flex items-center gap-item">
             <h2 className="font-title">{title}</h2>
             <a href={`https://store.steampowered.com/app/${appId}/`} target="_blank" rel="noopener noreferrer">

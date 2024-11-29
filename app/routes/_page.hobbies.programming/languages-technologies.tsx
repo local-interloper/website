@@ -4,7 +4,7 @@ const LanguagesAndTechnologies = () => {
 
   return (
     <article className="flex flex-col items-center gap-section w-full">
-      <section className="flex flex-col items-center gap-item max-w-4xl text-center">
+      <section className="flex flex-col items-center gap-item max-w-sm md:max-w-4xl text-center">
         <h1 className="font-title border-b-2 border-black">Languages / Technologies</h1>
         <p>
           During my learning, experimentation, work or whatever else, I&apos;ve utilized many tools.
@@ -12,7 +12,7 @@ const LanguagesAndTechnologies = () => {
           displeasure) working with (or against).
         </p>
       </section>
-      <section className="grid grid-cols-3 gap-section">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-section">
         {technologies.map(({category, items}, i) => (
           <section key={i} className="flex flex-col items-center rounded-lg p-5 bg-base-200 shadow gap-section">
             <h2 className="text-2xl font-mom">{category}</h2>

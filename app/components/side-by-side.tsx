@@ -8,7 +8,7 @@ interface Props extends PropsChildren {
 const SideBySide = ({center = true, children}: Props) => (
   <article
     className={cn(
-      "flex flex-col md:flex-row w-full max-w-4xl gap-section justify-between",
+      "flex flex-col md:flex-row w-full max-w-sm md:max-w-4xl gap-section justify-between",
       center && "items-center"
     )}
   >
