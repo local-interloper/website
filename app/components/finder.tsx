@@ -85,7 +85,9 @@ const Finder = () => {
           Press <kbd className="kbd">Ctrl</kbd> + <kbd className="kbd">K</kbd> to navigate
         </span>
         <button
-          className="flex md:hidden btn btn-square items-center justify-center" onClick={() => setFinderOpen(true)}
+          className="flex md:hidden btn btn-square items-center justify-center"
+          onClick={() => setFinderOpen(true)}
+          aria-label="Navigation menu"
         >
           <FaBars className="text-2xl" />
         </button>

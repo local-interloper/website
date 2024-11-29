@@ -30,7 +30,6 @@ export const Layout = ({children}: Props) => (
   <Finder />
   {children}
   <ScrollRestoration />
-  <LiveReload />
   <Scripts />
   </body>
   </html>

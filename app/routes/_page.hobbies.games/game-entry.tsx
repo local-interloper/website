@@ -1,5 +1,6 @@
 import {GameInfo} from "@/app/routes/_page.hobbies.games/data/games";
 import {FiExternalLink} from "react-icons/fi";
+import {LinksFunction} from "@remix-run/node";
 
 interface Props {
   game: GameInfo;
@@ -20,11 +21,17 @@ const GameEntry = ({game: {title, subtitle, description, appId}}: Props) => {
               <FiExternalLink className="text-xl" />
             </a>
           </section>
-          <p className="opacity-50">{subtitle}</p>
+          <p className="opacity-70">{subtitle}</p>
         </section>
         <p>{description}</p>
       </section>
-      <img className="rounded-lg shadow" src={imageUrl} alt={`${title} cover art`} width={400} />
+      <img
+        className="rounded-lg"
+        src={imageUrl}
+        alt={`${title} cover art`}
+        width={460 - 60}
+        height={215 - 60}
+      />
     </article>
   );
 };

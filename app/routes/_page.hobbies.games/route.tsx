@@ -6,7 +6,7 @@ import games from "@/app/routes/_page.hobbies.games/data/games";
 export const links: LinksFunction = () => games.map(game => (
   {
     rel: "preload",
-    href: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.appId}/header.jpg?t=1645843384`,
+    href: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.appId}/header.jpg`,
     as: "image"
   }
 ));
