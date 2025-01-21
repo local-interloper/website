@@ -5,7 +5,7 @@ import Social from "@/app/components/social";
 export const links: LinksFunction = () => [
   {
     rel: "preload",
-    href: Logo,
+    src: Logo,
     type: "image/png"
   }
 ];

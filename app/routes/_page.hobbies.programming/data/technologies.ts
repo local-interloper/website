@@ -2,17 +2,18 @@ import {
   SiAngular, SiAppwrite, SiArduino, SiAstro,
   SiC, SiCloudflare,
   SiCplusplus,
-  SiCsharp, SiDocker, SiElectron, SiEspressif, SiGit, SiGithub, SiGitlab,
+  SiSharp, SiDocker, SiElectron, SiEspressif, SiGit, SiGithub, SiGitlab,
   SiGo, SiGodotengine,
   SiHaxe, SiIced,
-  SiJavascript, SiJetbrains, SiJira, SiLinux, SiLinuxmint,
+  SiJavascript, SiJetbrains, SiJira, SiLinux,
   SiLua, SiMonogame, SiNextdotjs, SiNixos,
   SiPython, SiRaylib, SiRemix,
   SiRust, SiSocketdotio, SiTauri,
-  SiTypescript, SiUnity, SiUnrealengine, SiVercel, SiVisualstudiocode
+  SiTypescript, SiUnity, SiVercel,
 } from "react-icons/si";
+import {DiVisualstudio} from "react-icons/di";
 
-const technologies = [
+const TECHNOLOGIES = [
   {
     category: "Programming Languages",
     items: [
@@ -20,7 +21,7 @@ const technologies = [
       {name: "Go", Icon: SiGo},
       {name: "TypeScript", Icon: SiTypescript},
       {name: "JavaScript", Icon: SiJavascript},
-      {name: "C#", Icon: SiCsharp},
+      {name: "C#", Icon: SiSharp},
       {name: "C", Icon: SiC},
       {name: "C++", Icon: SiCplusplus},
       {name: "Lua", Icon: SiLua},
@@ -52,7 +53,7 @@ const technologies = [
     category: "Tools / Services",
     items: [
       {name: "Jetbrains", Icon: SiJetbrains},
-      {name: "Visual Studio Code", Icon: SiVisualstudiocode},
+      {name: "Visual Studio Code", Icon: DiVisualstudio},
       {name: "Git", Icon: SiGit},
       {name: "GitHub", Icon: SiGithub},
       {name: "GitLab", Icon: SiGitlab},
@@ -66,4 +67,4 @@ const technologies = [
   }
 ];
 
-export default technologies;
+export default TECHNOLOGIES;

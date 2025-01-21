@@ -1,15 +1,13 @@
 import DocumentHero from "@/app/components/document-hero";
 import BestOfTheBest from "@/app/routes/_page.hobbies.games/best-of-the-best";
 import {LinksFunction} from "@remix-run/node";
-import games from "@/app/routes/_page.hobbies.games/data/games";
+import GAMES from "@/app/routes/_page.hobbies.games/data/games";
 
-export const links: LinksFunction = () => games.map(game => (
-  {
-    rel: "preload",
-    href: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.appId}/header.jpg`,
-    as: "image"
-  }
-));
+export const links: LinksFunction = () => GAMES.map(game => ({
+  rel: "preload",
+  href: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.appId}/header.jpg`,
+  as: "image"
+}));
 
 const Games = () => {
   return (

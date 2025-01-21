@@ -12,13 +12,13 @@ const NoteworthyProjects = () => (
         best way to get an idea of what I worked on is to check out my GitHub account. Check the pinned repositories on
         my profile.
       </p>
-      <a
-        className="btn btn-outline" href="https://github.com/local-interloper" rel="noopener noreferrer" target="_blank"
-      >
-        <SiGithub className="text-2xl" />
-        GitHub
-      </a>
     </section>
+    <a
+      className="btn btn-outline" href="https://github.com/local-interloper" rel="noopener noreferrer" target="_blank"
+    >
+      <SiGithub className="text-2xl" />
+      GitHub
+    </a>
   </article>
 );
 

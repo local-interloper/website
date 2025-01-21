@@ -5,7 +5,7 @@ export interface GameInfo {
   appId: number;
 }
 
-const games: GameInfo[] = [
+const GAMES: GameInfo[] = [
   {
     title: "Rain World",
     subtitle: "ʕ•-•ʔ",
@@ -78,4 +78,4 @@ const games: GameInfo[] = [
   }
 ];
 
-export default games;
+export default GAMES;

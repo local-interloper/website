@@ -11,6 +11,7 @@ const Finder = () => {
   const [finderOpen, setFinderOpen] = useState(false);
   const [filteredFinderEntries, setFilteredFinderEntries] = useState(finderEntries);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
 
@@ -18,6 +19,8 @@ const Finder = () => {
     const keyPressHandler = (e: KeyboardEvent) => {
       if (e.key === "k" && e.ctrlKey) {
         e.preventDefault();
+        setSearch("");
+        updateFilter();
         setFinderOpen(true);
         setSelectedIndex(0);
         setFilteredFinderEntries(finderEntries);
@@ -63,8 +66,11 @@ const Finder = () => {
   });
 
   const onSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    const search = e.target.value.toLowerCase();
+    setSearch(e.target.value.toLowerCase());
+    updateFilter()
+  };
 
+  const updateFilter = () => {
     if (search.length === 0) {
       setFilteredFinderEntries(finderEntries);
       return;
@@ -76,7 +82,7 @@ const Finder = () => {
       entry.name.toLowerCase().includes(search) ||
       entry.description.toLowerCase().includes(search)
     )));
-  };
+  }
 
   return (
     <>
@@ -109,6 +115,7 @@ const Finder = () => {
               type="text"
               autoComplete="off"
               onChange={(e) => onSearch(e)}
+              value={search}
             />
             <FaMagnifyingGlass />
           </label>

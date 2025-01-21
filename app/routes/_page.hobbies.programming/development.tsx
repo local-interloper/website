@@ -1,7 +1,8 @@
 import SideBySide from "@/app/components/side-by-side";
 import DocumentTitle from "@/app/components/document-title";
 import {BsFilm} from "react-icons/bs";
-import {SiAudacity, SiBlender, SiKrita, SiUnity, SiVisualstudio} from "react-icons/si";
+import {SiAudacity, SiBlender, SiKrita, SiUnity} from "react-icons/si";
+import {DiVisualstudio} from "react-icons/di";
 
 const Development = () => (
   <article className="flex flex-col items-center w-full py-10 bg-base-200 shadow">
@@ -25,7 +26,7 @@ const Development = () => (
       <section className="flex flex-col items-center justify-center">
         <section className="grid grid-cols-3 md:grid-cols-2 gap-5">
           {[
-            SiVisualstudio,
+            DiVisualstudio,
             SiBlender,
             SiKrita,
             BsFilm,

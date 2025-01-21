@@ -1,4 +1,4 @@
-import technologies from "@/app/routes/_page.hobbies.programming/data/technologies";
+import TECHNOLOGIES from "@/app/routes/_page.hobbies.programming/data/technologies";
 
 const LanguagesAndTechnologies = () => {
 
@@ -13,7 +13,7 @@ const LanguagesAndTechnologies = () => {
         </p>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-section">
-        {technologies.map(({category, items}, i) => (
+        {TECHNOLOGIES.map(({category, items}, i) => (
           <section key={i} className="flex flex-col items-center rounded-lg p-5 bg-base-200 shadow gap-section">
             <h2 className="text-2xl font-mom">{category}</h2>
             <section className="grid grid-cols-3 gap-item">
