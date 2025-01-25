@@ -56,8 +56,8 @@ const Gallery = () => {
         <article
           className="flex fixed top-0 left-0 w-full h-full items-center justify-center z-40 bg-black bg-opacity-50 p-2 md:p-10"
         >
-          <section className="flex flex-col items-center gap-section h-full">
-            <img src={image} alt="A work by local.interloper" className="aspect-square h-full" />
+          <section className="flex flex-col items-center justify-center gap-section h-full">
+            <img src={image} alt="A work by local.interloper" className="aspect-square" />
             <button className="btn btn-secondary w-20" onClick={() => setImage(undefined)}>Close</button>
           </section>
         </article>

@@ -1,5 +1,5 @@
 import {useEffect, useState, ChangeEvent} from "react";
-import finderEntries from "@/lib/data/finder-entries";
+import FinderEntries from "@/lib/data/finder-entries";
 import FinderEntry from "@/app/components/finder-entry";
 import clamp from "@/lib/util/clamp";
 import {useNavigate} from "react-router";
@@ -9,7 +9,7 @@ import cn from "@/lib/util/cn";
 
 const Finder = () => {
   const [finderOpen, setFinderOpen] = useState(false);
-  const [filteredFinderEntries, setFilteredFinderEntries] = useState(finderEntries);
+  const [filteredFinderEntries, setFilteredFinderEntries] = useState(FinderEntries);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [search, setSearch] = useState("");
 
@@ -23,7 +23,7 @@ const Finder = () => {
         updateFilter();
         setFinderOpen(true);
         setSelectedIndex(0);
-        setFilteredFinderEntries(finderEntries);
+        setFilteredFinderEntries(FinderEntries);
       }
 
       document.getElementById("search")?.focus();
@@ -72,13 +72,13 @@ const Finder = () => {
 
   const updateFilter = () => {
     if (search.length === 0) {
-      setFilteredFinderEntries(finderEntries);
+      setFilteredFinderEntries(FinderEntries);
       return;
     }
 
     setSelectedIndex(0);
 
-    setFilteredFinderEntries(finderEntries.filter(entry => (
+    setFilteredFinderEntries(FinderEntries.filter(entry => (
       entry.name.toLowerCase().includes(search) ||
       entry.description.toLowerCase().includes(search)
     )));

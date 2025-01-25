@@ -3,7 +3,7 @@ import FinderEntryData from "@/lib/types/finder-entry-data";
 import {MdGames} from "react-icons/md";
 import {FaCode, FaLink, FaMusic, FaSuitcase, FaUser} from "react-icons/fa";
 
-const finderEntries: FinderEntryData[] = [
+const FinderEntries: FinderEntryData[] = [
   {
     name: "Home",
     Icon: FaHouse,
@@ -41,10 +41,10 @@ const finderEntries: FinderEntryData[] = [
     url: "/hobbies/art/"
   },
   {
-    name: "Business",
+    name: "Career",
     Icon: FaSuitcase,
-    description: "Work career",
-    url: "/business/"
+    description: "How did I get here?",
+    url: "/career/"
   },
   {
     name: "Linktree",
@@ -54,4 +54,4 @@ const finderEntries: FinderEntryData[] = [
   }
 ];
 
-export default finderEntries;
+export default FinderEntries;
