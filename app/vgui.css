@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Theme */
+@theme {
+  --color-vgui-base-100: #4c5844;
+  --color-vgui-base-200: #3e4637;
+  --color-vgui-base-300: #2e3429;
+  --color-vgui-border-light: #889180;
+  --color-vgui-border-dark: #282e22;
+  --color-vgui-text: #e6e8e5;
+  --color-vgui-text-dark: #a0aa95;
+  --color-vgui-gold: #c4b550;
+}
+
+/* Setup */
+body {
+  @apply bg-vgui-base-200;
+  color: var(--color-vgui-text);
+  background-position: center;
+}
+
+/* Core */
+.frame {
+  @apply bg-vgui-base-100 border-2 border-t-vgui-border-light border-l-vgui-border-light border-b-vgui-border-dark border-r-vgui-border-dark;
+}
+
+.frame-borderless {
+  @apply bg-vgui-base-100;
+}
+
+.frame-inset {
+  @apply bg-vgui-base-200 border-2 border-b-vgui-border-light border-r-vgui-border-light border-t-vgui-border-dark border-l-vgui-border-dark;
+}
+
+.title {
+  @apply text-vgui-gold text-xl font-bold;
+}
+
+/* Table */
+.table {
+  @apply bg-vgui-base-200 border-2 border-b-vgui-border-light border-r-vgui-border-light border-t-vgui-border-dark border-l-vgui-border-dark;
+}
+
+.table > thead > tr > th {
+  @apply bg-vgui-base-100 border-2 border-t-vgui-border-light border-l-vgui-border-light border-b-vgui-border-dark border-r-vgui-border-dark p-1;
+}
+
+.table > tbody > tr > td {
+  @apply p-1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Misc */
+.link {
+  @apply text-vgui-gold underline hover:no-underline text-nowrap;
+}
+
+.button {
+  @apply bg-vgui-base-100 border-2 border-t-vgui-border-light border-l-vgui-border-light border-b-vgui-border-dark border-r-vgui-border-dark p-1;
+}
+
+.button:active {
+  @apply bg-vgui-base-200 border-2 border-b-vgui-border-light border-r-vgui-border-light border-t-vgui-border-dark border-l-vgui-border-dark p-1;
+}
