@@ -16,7 +16,7 @@ const Contact = () => (
           <article className="frame-inset p-2">
             <article className="flex w-full flex-wrap items-center justify-evenly">
               {SOCIAL.map(({ Icon, url }, i) => (
-                <a href={url}>
+                <a key={i} href={url}>
                   <Icon className="text-4xl" />
                 </a>
               ))}

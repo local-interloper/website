@@ -15,7 +15,7 @@ interface Props extends PropsWithChildren {
 const VguiWindow = ({
   children,
   title = "",
-  hideCloseButton = false,
+  hideCloseButton = true,
   Icon = SiSteam,
   className,
   frameClassNames,
