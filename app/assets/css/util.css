@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+.font-title {
+    @apply text-neutral-50 text-5xl lg:text-7xl font-bold;
+    font-family: "Ubuntu", "sans-serif";
+}

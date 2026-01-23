@@ -1,0 +1,56 @@
+hero:
+  description: Projects
+  background: projects.png
+
+projects:
+  description:
+    Here you will find some of my projects that I can legally share with you. Keyword being "some" as these are the
+    ones I am particularly proud of. The rest is available on my GitHub.
+
+  projects:
+    - title: website
+      description: The very website you are looking at.
+      tech:
+        - simple-icons:typescript
+        - simple-icons:nuxt
+        - simple-icons:vercel
+
+    - title: wireless-nes-adapter
+      description:
+        I've made a physical piece of hardware that translates the native NES controller button presses
+        into Direct Input, allowing it to be used for playing modern PC games.
+      tech:
+        - simple-icons:c
+        - simple-icons:espressif
+        - simple-icons:arduino
+        - simple-icons:kicad
+
+    - title: ng-i18n
+      description:
+        A set of utilities for dealing with the angular's i18n tooling's lack of ability to update the translation
+        files.
+      tech:
+        - simple-icons:rust
+        - simple-icons:angular
+
+    - title: bismuth
+      description: Wrapper framework for discordgo that allows quickly coding rudimentary Discord bots.
+      tech:
+        - simple-icons:go
+        - simple-icons:discord
+
+    - title: valve-rcon
+      description: Implementation of Valve's RCON protocl in Rust.
+      tech:
+        - simple-icons:rust
+
+    - title: asteroids-game
+      description: A simple planet defense game.
+      tech:
+        - simple-icons:csharp
+        - simple-icons:unity
+
+    - title: hxsweeper
+      description: Minesweeper clone built with Haxe and Heaps.
+      tech:
+        - simple-icons:haxe

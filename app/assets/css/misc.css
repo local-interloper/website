@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@font-face {
+    @apply drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)];
+    font-family: "Minecraft";
+    src: url(/fonts/Minecraft.otf) format("opentype");
+}
+
+.font-minecraft {
+    @apply text-sm lg:text-xl text-yellow-400;
+    font-family: "Minecraft", "sans-serif";
+}
+
+.avatar {
+    @apply w-56 lg:w-96 rounded-full shadow;
+}

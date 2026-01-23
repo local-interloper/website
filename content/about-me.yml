@@ -1,0 +1,55 @@
+hero:
+  description: Your one-stop shop for everything me related.
+  background: hobbies/art.png
+
+aboutMe:
+  A nerdy guy with a nack for all things tech. Started programming from a rather young age (8) so that pretty much
+  cemented my life path. Ever since I did some BASIC on that old Win 95 rig, I've been working learning and improving
+  at making rocks think. That spawned numerous projects that often happen to be interesting conversation topics.
+
+hobbies:
+  description:
+    As a kid I always liked the idea of making video games. Chasing that goal taught me various valuable skills some of
+    which I would later make a career out of or turn into hobbies. That would primarily be programming, but other skills 
+    I've developed also play a key role in both my career path and development of my hobbies.
+
+  hobbies:
+    - title: Programming
+      background: code.png
+    - title: Art
+      background: art.png
+    - title: Embeded
+      background: board.png
+
+tools:
+  description:
+    It should come as no surprise that on my journey, I've used a variety of tools to achive all my goals.
+    While trying to get into game development I had to learn about programming, 3D modelling, animation, and whatnot.
+    That resulted in me getting familiar with a wide range of creation oriented software.
+
+  tools:
+    - label: VS Code
+      icon: simple-icons:visualstudiocode
+    - label: Bash
+      icon: simple-icons:gnubash
+    - label: Git
+      icon: simple-icons:git
+    - label: Linux
+      icon: simple-icons:linux
+    - label: Blender
+      icon: simple-icons:blender
+    - label: Krita
+      icon: simple-icons:krita
+    - label: Godot
+      icon: simple-icons:godotengine
+    - label: Unity
+      icon: simple-icons:unity
+    - label: Docker
+      icon: simple-icons:docker
+    - label: GitHub
+      icon: simple-icons:github
+    - label: Vercel
+      icon: simple-icons:vercel
+    - label: Excalidraw
+      icon: simple-icons:excalidraw
+

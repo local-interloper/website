@@ -1,0 +1,70 @@
+hero:
+  description: Time to suit up and shake hands.
+
+experience:
+  description:
+    As of now I have 2 years of formal experience working at Roglitech. Keyword being formal. I did numerous
+    small gigs in the past some of which you can check out below. Thankfully when people know you know your
+    trade, gigs and business tend to find their way on your table.
+
+skills:
+  description:
+    As my career history got longer so did the list of my skills. Here are some that I would say describe me 
+    really well.
+
+  hard:
+    - Programming
+    - Software Architecture Design
+    - UX/UI Design
+    - Tooling
+    - Fast Research
+
+  soft:
+    - Critical Thinking
+    - Vast Technical Knowledge
+    - Work Ethic
+    - Teamwork
+    - Humor
+    - Helpfulness
+    - Quick Learner
+
+works:
+  description: Here's a collection of my notable works.
+  works:
+    - title: Substance Painter Productivity Scripts
+      icon: "tabler:box"
+      date: 2021
+      description:
+        I was asked by a friend to optimize their workflow by creating a sorter for the output of Substaince
+        Painter which automatically sorted different textures according to the Substance Painter output names.
+
+    - title: VSG Easy LFS Manager
+      icon: "tabler:box"
+      date: 2021
+      description: I created a piece of software that would make using Git LFS easier for artists.
+
+    - title: "Cosmic Universe Game Launcher"
+      icon: "tabler:box"
+      date: 2022
+      description:
+        I created a game launcher for a demo of Cosmic Universe. It allowed for easy downloading and updating of the
+        game.
+
+    - title: "IOT Master Server"
+      icon: "tabler:box"
+      date: 2022
+      description:
+        I've built a IOT server that allowed for authentication of users and devices and control of said devices.
+        I later rewrote it to utilize MQTT.
+
+    - title: "Tradescrow"
+      icon: "tabler:box"
+      date: 2023
+      description: I worked as an assitant on tradescrow.io.
+
+    - title: "I joined Roglitech"
+      icon: "tabler:rocket"
+      date: 2024 - Present
+      description:
+        I was hired by Roglitech, primarily taking care for their Frontend needs but also working on
+        researching and applying new technologies to suit their needs.

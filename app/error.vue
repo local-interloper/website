@@ -1,0 +1,5 @@
+<template>
+  <UError
+    redirect="/"
+  />
+</template>
