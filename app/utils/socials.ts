@@ -15,6 +15,11 @@ export default [
     icon: "simple-icons:bluesky",
   },
   {
+    label: "LinkedIn",
+    to: "https://www.linkedin.com/in/marino-ljubeti%C4%87-799454221/",
+    icon: "simple-icons:linkedin"
+  },
+  {
     label: "Steam",
     to: "https://steamcommunity.com/id/local-interloper",
     icon: "simple-icons:steam",

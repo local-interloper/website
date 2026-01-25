@@ -31,14 +31,14 @@ const softSkills = ref<TreeItem[]>([
 </script>
 
 <template>
-  <article>
-    <UPageHero title="Business" :description="data!.hero.description" />
+  <article v-if="data">
+    <LayoutHero title="Business" :description="data.hero.description" background="business.png" />
 
     <UContainer>
       <UPageSection
         orientation="horizontal"
         title="Skills"
-        :description="data!.skills.description"
+        :description="data.skills.description"
       >
         <article class="flex flex-col lg:flex-row gap-2">
           <UTree
@@ -54,8 +54,8 @@ const softSkills = ref<TreeItem[]>([
         </article>
       </UPageSection>
 
-      <UPageSection title="Works" :description="data!.works.description">
-        <UTimeline :items="data!.works.works" />
+      <UPageSection title="Works" :description="data.works.description">
+        <UTimeline :items="data.works.works" />
       </UPageSection>
     </UContainer>
   </article>

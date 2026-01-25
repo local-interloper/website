@@ -1,5 +1,5 @@
 hero:
-  description: Projects
+  description: Learn more about what I do with my free time
   background: projects.png
 
 projects:
@@ -14,6 +14,7 @@ projects:
         - simple-icons:typescript
         - simple-icons:nuxt
         - simple-icons:vercel
+      tags: [web, frontend]
 
     - title: wireless-nes-adapter
       description:
@@ -24,6 +25,7 @@ projects:
         - simple-icons:espressif
         - simple-icons:arduino
         - simple-icons:kicad
+      tags: [hardware, embeded]
 
     - title: ng-i18n
       description:
@@ -32,25 +34,30 @@ projects:
       tech:
         - simple-icons:rust
         - simple-icons:angular
+      tags: [tool]
 
     - title: bismuth
       description: Wrapper framework for discordgo that allows quickly coding rudimentary Discord bots.
       tech:
         - simple-icons:go
         - simple-icons:discord
+      tags: [bot]
 
     - title: valve-rcon
       description: Implementation of Valve's RCON protocl in Rust.
       tech:
         - simple-icons:rust
+      tags: [console, cli]
 
     - title: asteroids-game
       description: A simple planet defense game.
       tech:
         - simple-icons:csharp
         - simple-icons:unity
+      tags: [gamedev, games]
 
     - title: hxsweeper
       description: Minesweeper clone built with Haxe and Heaps.
       tech:
         - simple-icons:haxe
+      tags: [gamedev, games]

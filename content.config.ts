@@ -48,6 +48,7 @@ export default defineContentConfig({
               title: z.string(),
               description: z.string(),
               tech: z.array(z.string()),
+              tags: z.array(z.string()),
             }),
           ),
         }),
