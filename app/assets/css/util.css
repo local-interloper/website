@@ -2,6 +2,15 @@
 @import "@nuxt/ui";
 
 .font-title {
-    @apply text-neutral-50 text-5xl lg:text-7xl font-bold;
-    font-family: "Ubuntu", "sans-serif";
+  @apply text-neutral-50 text-5xl lg:text-7xl font-bold;
+  font-family: "Ubuntu", "sans-serif";
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar { 
+    display: none;
 }

@@ -22,7 +22,7 @@ const softSkills = ref<TreeItem[]>([
     label: "soft-skills/",
     defaultExpanded: true,
     icon: "tabler:message-circle",
-    children: data.value!.skills.hard.map((skill) => ({
+    children: data.value!.skills.soft.map((skill) => ({
       label: skill,
       icon: "tabler:file",
     })),
@@ -43,12 +43,12 @@ const softSkills = ref<TreeItem[]>([
         <article class="flex flex-col lg:flex-row gap-2">
           <UTree
             disabled
-            class="bg-elevated p-2 rounded-lg shadow"
+            class="bg-elevated p-2 rounded-lg shadow w-full"
             :items="hardSkills"
           />
           <UTree
             disabled
-            class="bg-elevated p-2 rounded-lg shadow"
+            class="bg-elevated p-2 rounded-lg shadow w-full"
             :items="softSkills"
           />
         </article>

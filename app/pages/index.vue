@@ -14,7 +14,7 @@ const splash = useState("splash", () => pickRandom(splashes));
         >
       </article>
       <section>
-        <p class="text-dimmed">
+        <p class="text-center text-dimmed">
           A website for everything "me" related. Be it my works, my contacts or
           some info about me, you can find all of it right here.
         </p>
