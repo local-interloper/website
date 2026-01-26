@@ -13,7 +13,7 @@ const splash = useState("splash", () => pickRandom(splashes));
           >{{ splash }}</span
         >
       </article>
-      <section>
+      <section class="max-w-sm lg:max-w-lg">
         <p class="text-center text-dimmed">
           A website for everything "me" related. Be it my works, my contacts or
           some info about me, you can find all of it right here.

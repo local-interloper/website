@@ -5,11 +5,6 @@ export default [
     icon: "simple-icons:signal",
   },
   {
-    label: "GitHub",
-    to: "https://github.com/local-interloper",
-    icon: "simple-icons:github",
-  },
-  {
     label: "Bluesky",
     to: "https://bsky.app/profile/local-interloper.bsky.social",
     icon: "simple-icons:bluesky",
@@ -17,7 +12,7 @@ export default [
   {
     label: "LinkedIn",
     to: "https://www.linkedin.com/in/marino-ljubeti%C4%87-799454221/",
-    icon: "simple-icons:linkedin"
+    icon: "simple-icons:linkedin",
   },
   {
     label: "Steam",
@@ -28,5 +23,10 @@ export default [
     label: "Instagram",
     to: "https://www.instagram.com/local.interloper/",
     icon: "simple-icons:instagram",
+  },
+  {
+    label: "GitHub",
+    to: "https://github.com/local-interloper",
+    icon: "simple-icons:github",
   },
 ];

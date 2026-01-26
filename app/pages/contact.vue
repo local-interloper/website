@@ -48,16 +48,18 @@ const copyDiscordUsernameHandler = () => {
         description="Here are some other ways to reach out to me."
       >
         <article class="flex justify-center items-center gap-2">
-          <UButton
-            v-for="({ label, icon, to }, index) in socials"
-            :key="index"
-            :to="to"
-            variant="outline"
-            class="flex flex-col items-center justify-center gap-2 w-28 h-28"
-          >
-            <UIcon class="text-6xl" :name="icon" />
-            <span class="font-semibold">{{ label }}</span>
-          </UButton>
+          <article class="grid grid-cols-3 lg:grid-cols-6 gap-2">
+            <UButton
+              v-for="({ label, icon, to }, index) in socials"
+              :key="index"
+              :to="to"
+              variant="outline"
+              class="flex flex-col items-center justify-center gap-2 w-24 h-24 lg:w-28 lg:h-28"
+            >
+              <UIcon class="text-5xl lg:text-6xl" :name="icon" />
+              <span class="font-semibold">{{ label }}</span>
+            </UButton>
+          </article>
         </article>
       </UPageSection>
     </UContainer>
