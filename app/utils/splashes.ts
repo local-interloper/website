@@ -3,7 +3,6 @@ export default [
     "Also try Half-Life",
     "Also try Voices of the Void",
     "Also try Dark Souls",
-    "Also try cumjar.org",
     "100% Nuxt",
     "Switching up Vue-s",
     "Still waiting for HL3",
