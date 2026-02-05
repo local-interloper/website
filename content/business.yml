@@ -34,7 +34,7 @@ works:
       icon: "tabler:box"
       date: 2021
       description:
-        I was asked by a friend to optimize their workflow by creating a sorter for the output of Substaince
+        I was asked by a friend to optimize their workflow by creating a sorter for the output of Substance
         Painter which automatically sorted different textures according to the Substance Painter output names.
 
     - title: VSG Easy LFS Manager
