@@ -32,14 +32,14 @@ const { data } = await useAsyncData("about-me-content", async () =>
             v-for="({ title, background }, index) in data.hobbies.hobbies"
             :key="index"
             variant="subtle"
-            class="relative h-20 flex items-center px-5 overflow-clip bg-elevated/60 rounded-lg shadow"
+            class="relative h-20 flex items-center px-5 overflow-clip bg-black/10 rounded-lg shadow"
           >
-            <article class="flex items-center gap-2">
+            <article class="flex items-center gap-2 z-20">
               <h1 class="text-2xl font-bold text-nowrap">{{ title }}</h1>
             </article>
             <NuxtImg
               :src="`/img/hobbies/${background}`"
-              class="absolute flex top-0 left-0 w-full h-full object-cover -z-10 opacity-50"
+              class="absolute flex top-0 left-0 w-full h-full object-cover z-10 opacity-50"
             />
           </section>
         </article>

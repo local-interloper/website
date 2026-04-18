@@ -41,7 +41,7 @@ projects:
         the internet for insecure Servers and dumping them into a sqlite database.
       tech:
         - simple-icons:go
-        - simple-icons:sqlite
+        - simple-icons:postgresql
       tags: [networking]
 
     - title: ng-i18n

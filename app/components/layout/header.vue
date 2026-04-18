@@ -1,7 +1,7 @@
 <template>
   <UHeader class="fixed top-0 left-0 z-20 w-full">
     <template #title>
-      <NuxtImg src="/img/logo.png" class="h-10 rounded-lg" />
+      <NuxtImg src="/img/logo-goldsrc.png" class="h-10 rounded-lg" />
     </template>
 
     <UNavigationMenu :items="navigation" />

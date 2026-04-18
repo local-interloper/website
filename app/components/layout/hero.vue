@@ -17,7 +17,7 @@ const {
 </script>
 
 <template>
-  <article class="relative flex justify-center items-center h-svh text-dimmed" :class="[!hideShadow && 'shadow-lg']">
+  <article class="relative flex justify-center items-center h-svh text-dimmed" :class="[!hideShadow && 'shadow-lg', background && 'bg-black/50']">
     <section class="flex flex-col items-center text-center gap-5">
       <h1 v-if="title" class="font-title">{{ title }}</h1>
       <p v-if="description" class="text-xl">{{ description }}</p>
@@ -27,7 +27,7 @@ const {
     <NuxtImg
       v-if="background"
       :src="`/img/backgrounds/${background}`"
-      class="absolute flex top-0 left-0 w-full h-full object-cover -z-10 opacity-15"
+      class="absolute flex top-0 left-0 w-full h-full object-cover z-10 opacity-15"
       preload
     />
 
