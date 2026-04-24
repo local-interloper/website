@@ -32,7 +32,7 @@ const softSkills = ref<TreeItem[]>([
 
 <template>
   <article v-if="data">
-    <LayoutHero title="Business" :description="data.hero.description" background="business.png" />
+    <LayoutHero title="Business" :description="data.hero.description" background="business.webp" />
 
     <UContainer>
       <UPageSection

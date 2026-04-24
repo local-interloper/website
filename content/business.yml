@@ -1,5 +1,5 @@
 hero:
-  description: Time to suit up and shake hands.
+  description: Time to suit up and shake hands
 
 experience:
   description:
@@ -34,8 +34,7 @@ works:
       icon: "tabler:box"
       date: 2021
       description:
-        I was asked by a friend to optimize their workflow by creating a sorter for the output of Substance
-        Painter which automatically sorted different textures according to the Substance Painter output names.
+        I greatly optimized work pipelines of a company by building a sorting system for their software output.
 
     - title: VSG Easy LFS Manager
       icon: "tabler:box"

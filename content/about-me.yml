@@ -1,6 +1,6 @@
 hero:
   description: Your one-stop shop for everything me related.
-  background: hobbies/art.png
+  background: hobbies/art.webp
 
 aboutMe:
   A nerdy guy with a nack for all things tech. Started programming from a rather young age (8) so that pretty much
@@ -15,11 +15,11 @@ hobbies:
 
   hobbies:
     - title: Programming
-      background: code.png
+      background: code.webp
     - title: Art
-      background: art.png
+      background: art.webp
     - title: Embeded
-      background: board.png
+      background: board.webp
 
 tools:
   description:

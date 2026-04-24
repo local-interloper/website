@@ -8,7 +8,7 @@ const { data } = await useAsyncData("about-me-content", async () =>
   <article v-if="data">
     <LayoutHero
       title="About Me"
-      background="about-me.png"
+      background="about-me.webp"
       description="Your one stop shop for basic info on me"
     />
 
@@ -18,7 +18,7 @@ const { data } = await useAsyncData("about-me-content", async () =>
         orientation="horizontal"
         :description="data.aboutMe"
       >
-        <NuxtImg src="/img/avatar.png" class="rounded-xl" />
+        <NuxtImg src="/img/avatar.webp" class="rounded-xl" />
       </UPageSection>
 
       <UPageSection

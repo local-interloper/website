@@ -13,6 +13,9 @@ export default defineNuxtConfig({
     "@nuxt/hints",
     "@nuxt/content",
   ],
+  image: {
+    provider: 'vercel'
+  },
   routeRules: {
     "/": { prerender: true },
   },

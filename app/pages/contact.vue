@@ -18,7 +18,7 @@ const copyDiscordUsernameHandler = () => {
     <LayoutHero
       title="Contact"
       description="How and where you can find me"
-      background="contact.png"
+      background="contact.webp"
     />
     <UContainer>
       <UPageSection

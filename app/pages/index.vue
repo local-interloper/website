@@ -5,7 +5,7 @@ const splash = useState("splash", () => pickRandom(splashes));
 <template>
   <LayoutHero hide-scroll hide-shadow>
     <article class="flex flex-col justify-center items-center gap-2">
-      <NuxtImg class="avatar" src="/img/avatar.png" />
+      <NuxtImg class="avatar" src="/img/avatar.webp" />
       <article class="text-toned relative mb-10">
         <h1 class="font-title text-neutral-50">local.interloper</h1>
         <span
